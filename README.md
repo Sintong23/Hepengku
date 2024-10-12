@@ -18,53 +18,56 @@ Tim pengembang: Kelompok 6
 - Wahyu Jhon Riadi Sianipar - 221402135  
   Role *()*
 
-## Desc
+## **Desc**
 
 Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna mengelola keuangan pribadi dengan lebih efisien. Hepengku memungkinkan Anda untuk mencatat pendapatan dan pengeluaran sehari-hari, memantau kebiasaan belanja, serta merencanakan anggaran dengan mudah.
 
-## Features
+## **Features**
 
-USER:
-  Dashboard:
-    -Melihat pengeluaran/pemasukan berdasarkan periode (harian, mingguan, bulanan).
-    -Melihat sisa saldo/dana kita.
-    -Menampilkan transaksi terbaru (baik pengeluaran maupun pemasukan).
-    -Menampilkan transaksi yang mendekati batas anggaran atau target keuangan.
-    -Menamilkan riwayat transaksi.
-    -menampilkan riwayat pemasukan dan pengeluaran
+### **1. USER :**
+   
+    **Dashboard:**
+- Melihat pengeluaran/pemasukan berdasarkan periode (harian, mingguan, bulanan).
+- Melihat sisa saldo/dana kita.
+- Menampilkan transaksi terbaru (baik pengeluaran maupun pemasukan).
+- Menampilkan transaksi yang mendekati batas anggaran atau target keuangan.
+- Menamilkan riwayat transaksi.
+- Menampilkan riwayat pemasukan dan pengeluaran
     
-  Profil:
-    -Melihat data pengguna/profil pengguna.
+Profil:
+- Melihat data pengguna/profil pengguna.
 
-  Reports:
-    -Melihat statistik pengeluaran, pemasukan, dan saldo bulanan.
-    -Melihat budget bulanan.
-    -Mengedit budget bulanan.
+Reports:
+- Melihat statistik pengeluaran, pemasukan, dan saldo bulanan.
+- Melihat budget bulanan.
+- Mengedit budget bulanan.
 
-  Add:
-    -Menambahkan pemasukan dan kategori pemasukan.
-    -Menambahkan pengeluaran dan kategori pengeluaran.
+Add:
+- Menambahkan pemasukan dan kategori pemasukan.
+- Menambahkan pengeluaran dan kategori pengeluaran.
 
-  Transfer:
-    -Melakukan transaksi.
-    -Melihat kategori transaksi.
+Transfer:
+- Melakukan transaksi.
+- Melihat kategori transaksi.
     
+
+### **2. ADMIN :**
     
   
   
-## Library
+## **Library**
 
 TBA
 
-## Permission
+## **Permission**
 
 TBA
 
-## Environment
+## **Environment**
 
 TBA
 
-### Instalasi dan Setup
+### **Instalasi dan Setup**
 
 1. **Install Android Studio**
     - Download dan install Android Studio dari [Android Studio Official Website](https://developer.android.com/studio).
