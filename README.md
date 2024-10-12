@@ -24,9 +24,9 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 
 ## **Features**
 
-### **1. USER :**
+### **USER :**
    
-    **Dashboard:**
+**1. Dashboard:**
 - Melihat pengeluaran/pemasukan berdasarkan periode (harian, mingguan, bulanan).
 - Melihat sisa saldo/dana kita.
 - Menampilkan transaksi terbaru (baik pengeluaran maupun pemasukan).
@@ -34,25 +34,26 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 - Menamilkan riwayat transaksi.
 - Menampilkan riwayat pemasukan dan pengeluaran
     
-Profil:
+**2. Profil:**
 - Melihat data pengguna/profil pengguna.
 
-Reports:
+**3. Reports:**
 - Melihat statistik pengeluaran, pemasukan, dan saldo bulanan.
 - Melihat budget bulanan.
 - Mengedit budget bulanan.
 
-Add:
+**4. Add:**
 - Menambahkan pemasukan dan kategori pemasukan.
 - Menambahkan pengeluaran dan kategori pengeluaran.
 
-Transfer:
+**5. Transfer:**
 - Melakukan transaksi.
 - Melihat kategori transaksi.
     
 
 ### **2. ADMIN :**
     
+
   
   
 ## **Library**
