@@ -53,7 +53,8 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 
 ### **2. ADMIN :**
     
-
+Fungsi: 
+1. Membuat, mengedit, dan menghapus kategori anggaran.
   
   
 ## **Library**
