@@ -68,10 +68,10 @@ TBA
 Environment untuk Pengembangan dan Testing Aplikasi Hepengku
 
 - **Operating System**: Windows 11 Professional (64-bit)
-- RAM : 8GB
-- Harddisk : SSD 512GB
-- Processor : Intel Core i5 Generasi 10 atau lebih tinggi 
-- VGA : Intel® Iris® Xᵉ Graphics 
+- **RAM** : 8GB
+- **Harddisk** : SSD 512GB
+- **Processor** : Intel Core i5 Generasi 10 atau lebih tinggi 
+- **VGA** : Intel® Iris® Xᵉ Graphics 
 - **Kotlin**: Versi terbaru (>= 1.6.0)
 - **Android Studio**: Versi terbaru Android SDK 31 atau lebih tinggi dan Android Emulator.
 - **JDK**: Java Development Kit versi 11.
