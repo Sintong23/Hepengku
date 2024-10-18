@@ -65,8 +65,18 @@ TBA
 TBA
 
 ## **Environment**
+Environment untuk Pengembangan dan Testing Aplikasi Hepengku
 
-TBA
+• **Operating System**: Windows 11 Professional (64-bit)
+RAM : 8GB
+Harddisk : SSD 512GB
+Processor : Intel Core i5 Generasi 10 atau lebih tinggi 
+VGA : Intel® Iris® Xᵉ Graphics 
+• **Kotlin**: Versi terbaru (>= 1.6.0)
+• **Android Studio**: Versi terbaru Android SDK 31 atau lebih tinggi dan Android Emulator.
+• **JDK**: Java Development Kit versi 11.
+• **Gradle**: Versi yang sesuai dengan Android Studio terbaru.
+
 
 ### **Instalasi dan Setup**
 
@@ -80,5 +90,5 @@ TBA
       ```
       git clone https://github.com/Sintong23/Hepengku.git
       ```
-      cd bookjas
+      cd Hepengku
       ```
