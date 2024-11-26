@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/baseline_home_24"
+        android:title="home" />
+    <item
+        android:id="@+id/chartFragment"
+        android:icon="@drawable/baseline_pie_chart_24"
+        android:title="Chart" />
+    <item
+        android:id="@+id/addExpensesFragment"
+        android:icon="@drawable/baseline_add_24"
+        android:title="AddFragment" />
+    <item
+        android:id="@+id/reportFragment"
+        android:icon="@drawable/baseline_newspaper_24"
+        android:title="Report" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Profile" />
+</menu>
