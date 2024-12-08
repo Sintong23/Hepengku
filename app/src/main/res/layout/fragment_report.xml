@@ -1,14 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReportFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ini report" />
 
-</FrameLayout>
+    <View
+        android:id="@+id/view4"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:background="#8DD46C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/iv_statistic"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_view_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view9" />
+
+    <TextView
+        android:id="@+id/tv_month7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="MONTH"
+        android:textColor="#1C1B1F"
+        android:textSize="10sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toStartOf="@+id/tv_expanses"
+        app:layout_constraintStart_toStartOf="@id/iv_statistic"
+        app:layout_constraintTop_toBottomOf="@id/tv_MonthlyStatistics" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reports"
+        app:layout_constraintBottom_toBottomOf="@id/view4"
+        app:layout_constraintEnd_toEndOf="@id/view4"
+        app:layout_constraintStart_toStartOf="@id/view4"
+        app:layout_constraintTop_toTopOf="@id/view4"
+        />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="410dp"
+        android:layout_height="65dp"
+        android:background="#9FCA54"
+        app:layout_constraintBottom_toTopOf="@id/iv_statistic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view4"
+        />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/image_removebg_preview__6_"
+        app:layout_constraintBottom_toBottomOf="@id/view9"
+        app:layout_constraintStart_toStartOf="@id/view9"
+        app:layout_constraintTop_toTopOf="@id/view9"
+        />
+
+    <TextView
+        android:id="@+id/tv_MonthlyStatistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:text="Monthly Statistics"
+        android:textColor="#DEDBDB"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_statistic"
+        app:layout_constraintTop_toTopOf="@+id/iv_statistic" />
+
+    <TextView
+        android:id="@+id/tv_expanses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expanses"
+        android:textColor="#FF0000"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_month7"
+        app:layout_constraintTop_toTopOf="@+id/tv_month7"
+        app:layout_constraintEnd_toStartOf="@id/tv_income"/>
+
+    <TextView
+        android:id="@+id/tv_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Income"
+        android:textColor="#E8EC0B"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@id/tv_expanses"
+        app:layout_constraintTop_toTopOf="@id/tv_month7"
+        app:layout_constraintEnd_toStartOf="@id/tv_balance" />
+
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@id/tv_income"
+        app:layout_constraintTop_toTopOf="@id/tv_month7"
+        app:layout_constraintEnd_toEndOf="@id/iv_statistic" />
+
+    <TextView
+        android:id="@+id/nilai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#FCF5FD"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@id/tv_expanses"
+        app:layout_constraintEnd_toEndOf="@id/tv_expanses"
+        app:layout_constraintTop_toBottomOf="@id/tv_expanses" />
+
+    <TextView
+        android:id="@+id/nilai2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#FCF5FD"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@id/tv_income"
+        app:layout_constraintEnd_toEndOf="@id/tv_income"
+        app:layout_constraintTop_toBottomOf="@id/tv_income" />
+
+    <TextView
+        android:id="@+id/nilai3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#FCF5FD"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@id/tv_balance"
+        app:layout_constraintEnd_toEndOf="@id/tv_balance"
+        app:layout_constraintTop_toBottomOf="@id/tv_balance" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/baseline_keyboard_arrow_right_24"
+        app:layout_constraintEnd_toEndOf="@+id/iv_statistic"
+        app:layout_constraintTop_toTopOf="@+id/iv_statistic" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_view_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_statistic" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/baseline_keyboard_arrow_right_24"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/view7" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="92dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:indeterminateDuration="3600"
+        android:mirrorForRtl="false"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/view7" />
+
+    <TextView
+        android:id="@+id/tv_budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Monthly Budget"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/view7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
