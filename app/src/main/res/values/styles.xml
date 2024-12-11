@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Tambahkan style untuk teks tanggal di CalendarView -->
+    <style name="CalendarDateText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#D9D9D9</item> <!-- Warna teks tanggal -->
+    </style>
+
+    <!-- Tambahkan style untuk teks hari dalam seminggu (Senin, Selasa, dll.) -->
+    <style name="CalendarWeekText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#4CAF50</item> <!-- Warna teks hari dalam seminggu -->
+    </style>
+
+</resources>

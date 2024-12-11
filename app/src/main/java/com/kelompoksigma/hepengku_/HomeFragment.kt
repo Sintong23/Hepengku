@@ -1,10 +1,14 @@
 package com.kelompoksigma.hepengku_
 
+import android.app.DatePickerDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.kelompoksigma.hepengku_.databinding.FragmentHomeBinding
+import java.util.Calendar
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +24,8 @@ class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +39,60 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        // Gunakan View Binding
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Navigasi ke fragment_calender_detail saat imageView5 ditekan
+        binding.imageView5.setOnClickListener {
+            findNavController().navigate(R.id.calenderDetailFragment)
+        }
+
+        // Ambil tanggal saat ini
+        val calendar = Calendar.getInstance()
+        val currentYear = calendar.get(Calendar.YEAR)
+        val currentMonth = calendar.get(Calendar.MONTH)
+        val currentDay = calendar.get(Calendar.DAY_OF_MONTH)
+
+        // Akses TextView dari binding
+        val tvMonth = binding.tvMonth
+
+        // Buat TextView bisa ditekan
+        tvMonth.setOnClickListener {
+            // Tampilkan DatePickerDialog
+            val datePickerDialog = DatePickerDialog(
+                requireContext(),
+                { _, year, month, _ ->
+                    // Ubah angka bulan (0-11) menjadi nama bulan
+                    val monthName = getMonthName(month)
+                    tvMonth.text = "$monthName $year"
+                },
+                currentYear, currentMonth, currentDay
+            )
+            datePickerDialog.show()
+        }
+    }
+
+    // Fungsi untuk mengonversi angka bulan (0-11) menjadi nama bulan
+    private fun getMonthName(month: Int): String {
+        val months = arrayOf(
+            "Januari", "Februari", "Maret",
+            "April", "Mei", "Juni",
+            "Juli", "Agustus", "September",
+            "Oktober", "November", "Desember"
+        )
+        return months[month]
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 
     companion object {
         /**

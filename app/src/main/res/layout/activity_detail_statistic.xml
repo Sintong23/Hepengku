@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail_statistic">
+
+    <View
+        android:id="@+id/view25"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#BAE4A6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view23" />
+
+    <View
+        android:id="@+id/view23"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#8DD46C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nilai_income2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Income : 1,505,000"
+        app:layout_constraintEnd_toEndOf="@id/view23"
+        app:layout_constraintStart_toEndOf="@id/tv_nilai_expenses"
+        app:layout_constraintTop_toBottomOf="@id/tv_nilai_total_balance" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/baseline_keyboard_backspace_24_black"
+        app:layout_constraintStart_toStartOf="@+id/view23"
+        app:layout_constraintTop_toTopOf="@id/view23" />
+
+    <TextView
+        android:id="@+id/tv_total_balace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Total balance"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view23"
+        app:layout_constraintEnd_toEndOf="@+id/view23"
+        app:layout_constraintStart_toStartOf="@+id/view23"
+        app:layout_constraintTop_toTopOf="@+id/view23" />
+
+    <TextView
+        android:id="@+id/tv_nilai_total_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1,351,000"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_total_balace"
+        app:layout_constraintStart_toStartOf="@+id/tv_total_balace"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_balace" />
+
+    <TextView
+        android:id="@+id/tv_nilai_expenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:text="Expenses : 154,000"
+        app:layout_constraintEnd_toStartOf="@id/tv_nilai_income2"
+        app:layout_constraintStart_toStartOf="@id/view23"
+        app:layout_constraintTop_toBottomOf="@id/tv_nilai_total_balance" />
+
+    <TextView
+        android:id="@+id/tv_month8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Month"
+        app:layout_constraintEnd_toStartOf="@+id/tv_expenses8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view25"
+        app:layout_constraintBottom_toBottomOf="@id/view25"/>
+
+    <TextView
+        android:id="@+id/tv_expenses8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expenses"
+        app:layout_constraintEnd_toStartOf="@+id/tv_income8"
+        app:layout_constraintStart_toEndOf="@id/tv_month8"
+        app:layout_constraintTop_toTopOf="@+id/tv_month8"
+        app:layout_constraintBottom_toBottomOf="@id/tv_month8"/>
+
+    <TextView
+        android:id="@+id/tv_income8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Income"
+        app:layout_constraintEnd_toStartOf="@+id/tv_balance8"
+        app:layout_constraintStart_toEndOf="@id/tv_expenses8"
+        app:layout_constraintTop_toTopOf="@+id/tv_month8"
+        app:layout_constraintBottom_toBottomOf="@id/tv_month8"/>
+
+    <TextView
+        android:id="@+id/tv_balance8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_income8"
+        app:layout_constraintTop_toTopOf="@+id/tv_month8"
+        app:layout_constraintBottom_toBottomOf="@id/tv_month8"/>
+
+    <TextView
+        android:id="@+id/tv_year8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="2024"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_month8"
+        app:layout_constraintStart_toStartOf="@+id/tv_month8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_month8" />
+
+    <TextView
+        android:id="@+id/tv_nilai2_income8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="725,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_income8"
+        app:layout_constraintStart_toStartOf="@+id/tv_income8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai2_month8" />
+
+    <TextView
+        android:id="@+id/tv_nilai_expenses4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="50,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_expenses8"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="@+id/tv_expenses8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai_month2" />
+
+    <TextView
+        android:id="@+id/tv_nilai_income4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="400,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_income8"
+        app:layout_constraintStart_toStartOf="@+id/tv_income8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai_month2" />
+
+    <TextView
+        android:id="@+id/tv_nilai_balance3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="350,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_balance8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_balance8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai_month2" />
+
+    <TextView
+        android:id="@+id/tv_nilai2_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Mar"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_month8"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/tv_month8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nilai_month2" />
+
+    <TextView
+        android:id="@+id/tv_nilai_income8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="360,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_income8"
+        app:layout_constraintStart_toStartOf="@+id/tv_income8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai_month8" />
+
+    <TextView
+        android:id="@+id/tv_year2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:text="2023"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_month8"
+        app:layout_constraintStart_toStartOf="@+id/tv_month8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_month8" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="288dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nilai2_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="20,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_income8"
+        app:layout_constraintStart_toStartOf="@+id/tv_income8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai2_month" />
+
+    <TextView
+        android:id="@+id/tv_nilai2_expenses8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="0"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_expenses8"
+        app:layout_constraintStart_toStartOf="@+id/tv_expenses8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai2_month8" />
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="436dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nilai2_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="-80,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_balance8"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="@+id/tv_balance8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai2_month" />
+
+    <TextView
+        android:id="@+id/tv_nilai_expenses8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="4,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_expenses8"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/tv_expenses8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai_month8" />
+
+    <TextView
+        android:id="@+id/tv_nilai2_balance8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="725,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_balance8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_balance8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai2_month8" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="252dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nilai_month2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Jan"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_month8"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/tv_month8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_year2" />
+
+    <TextView
+        android:id="@+id/tv_nilai2_expenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="100,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_expenses8"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/tv_expenses8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai2_month" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="400dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nilai_balance8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="356,000"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_balance8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_balance8"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai_month8" />
+
+    <TextView
+        android:id="@+id/tv_nilai2_month8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Sept"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_month8"
+        app:layout_constraintStart_toStartOf="@+id/tv_month8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nilai_month8" />
+
+    <TextView
+        android:id="@+id/tv_nilai_month8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Dec"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_month8"
+        app:layout_constraintStart_toStartOf="@+id/tv_month8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_year8" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_nilai_expenses"
+        app:layout_constraintEnd_toStartOf="@id/tv_total_balace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
