@@ -13,9 +13,13 @@
         android:theme="@style/Theme.Hepengku_"
         tools:targetApi="31">
         <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
-<!--            android:theme="@style/Theme.MySplashScreen">-->
+
+            <!-- android:theme="@style/Theme.MySplashScreen"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
