@@ -11,10 +11,20 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
+        android:id="@+id/calenderDetailFragment"
+        android:name="com.kelompoksigma.hepengku_.CalenderDetail"
+        android:label="fragment_calender_detail"
+        tools:layout="@layout/fragment_calender_detail" />
+    <fragment
         android:id="@+id/chartFragment"
         android:name="com.kelompoksigma.hepengku_.ChartFragment"
         android:label="fragment_chart"
         tools:layout="@layout/fragment_chart" />
+    <fragment
+        android:id="@+id/chartIncomeFragment"
+        android:name="com.kelompoksigma.hepengku_.ChartIncome"
+        android:label="fragment_add_income"
+        tools:layout="@layout/fragment_chart_income" />
     <fragment
         android:id="@+id/reportFragment"
         android:name="com.kelompoksigma.hepengku_.ReportFragment"
@@ -35,4 +45,27 @@
         android:name="com.kelompoksigma.hepengku_.AddIncomeFragment"
         android:label="fragment_add_income"
         tools:layout="@layout/fragment_add_income" />
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.kelompoksigma.hepengku_.AddFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.kelompoksigma.hepengku_.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/detailmonthly"
+        android:name="com.kelompoksigma.hepengku_.DetailMonthly"
+        android:label="fragment_detail_monthly_budget"
+        tools:layout="@layout/fragment_detail_monthly_budget" />
+    <fragment
+        android:id="@+id/EditBudgetMonthly"
+        android:name="com.kelompoksigma.hepengku_.EditBudgetMonthly"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+
+
+
 </navigation>

@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMonthly">
+
+    <View
+        android:id="@+id/view19"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="#BAE4A6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view38"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view39"
+        app:layout_constraintStart_toEndOf="@id/view37"
+        app:layout_constraintTop_toTopOf="@+id/view37" />
+
+    <View
+        android:id="@+id/view33"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view36"
+        app:layout_constraintStart_toEndOf="@id/view34"
+        app:layout_constraintTop_toTopOf="@+id/view31" />
+
+    <View
+        android:id="@+id/view21"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view35"
+        app:layout_constraintStart_toEndOf="@id/view27"
+        app:layout_constraintTop_toTopOf="@+id/view22" />
+
+    <View
+        android:id="@+id/view40"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_5"
+        app:layout_constraintEnd_toEndOf="@id/view19"
+        app:layout_constraintStart_toEndOf="@id/view39"
+        app:layout_constraintTop_toTopOf="@+id/view37" />
+
+    <View
+        android:id="@+id/view27"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view21"
+        app:layout_constraintStart_toEndOf="@id/view22"
+        app:layout_constraintTop_toTopOf="@+id/view22" />
+
+    <View
+        android:id="@+id/view39"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view40"
+        app:layout_constraintStart_toEndOf="@id/view38"
+        app:layout_constraintTop_toTopOf="@+id/view37" />
+
+    <View
+        android:id="@+id/view29"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view30"
+        app:layout_constraintStart_toEndOf="@id/view26"
+        app:layout_constraintTop_toTopOf="@id/view28" />
+
+    <View
+        android:id="@+id/view35"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toEndOf="@id/view19"
+        app:layout_constraintStart_toEndOf="@id/view21"
+        app:layout_constraintTop_toTopOf="@+id/view22" />
+
+    <View
+        android:id="@+id/view36"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toEndOf="@id/view19"
+        app:layout_constraintStart_toEndOf="@id/view33"
+        app:layout_constraintTop_toTopOf="@+id/view31" />
+
+    <View
+        android:id="@+id/view22"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view27"
+        app:layout_constraintStart_toStartOf="@+id/view19"
+        app:layout_constraintTop_toBottomOf="@+id/view28" />
+
+    <View
+        android:id="@+id/view34"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view33"
+        app:layout_constraintStart_toEndOf="@id/view31"
+        app:layout_constraintTop_toTopOf="@+id/view31" />
+
+    <View
+        android:id="@+id/view37"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view38"
+        app:layout_constraintStart_toStartOf="@id/view19"
+        app:layout_constraintTop_toBottomOf="@+id/view31" />
+
+    <View
+        android:id="@+id/view26"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view29"
+        app:layout_constraintStart_toEndOf="@+id/view28"
+        app:layout_constraintTop_toTopOf="@+id/view28" />
+
+    <View
+        android:id="@+id/view28"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view26"
+        app:layout_constraintStart_toStartOf="@id/view19"
+        app:layout_constraintTop_toBottomOf="@+id/view20" />
+
+    <View
+        android:id="@+id/view30"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toEndOf="@+id/view19"
+        app:layout_constraintStart_toEndOf="@id/view29"
+        app:layout_constraintTop_toTopOf="@id/view28" />
+
+    <View
+        android:id="@+id/view20"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toEndOf="@+id/view19"
+        app:layout_constraintStart_toStartOf="@id/view19"
+        app:layout_constraintTop_toTopOf="@id/view19" />
+
+    <View
+        android:id="@+id/view31"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rounded_view_4"
+        app:layout_constraintEnd_toStartOf="@+id/view34"
+        app:layout_constraintStart_toStartOf="@+id/view19"
+        app:layout_constraintTop_toBottomOf="@+id/view22" />
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view31"
+        app:layout_constraintEnd_toEndOf="@id/view31"
+        app:layout_constraintStart_toStartOf="@id/view31"
+        app:layout_constraintTop_toTopOf="@id/view31" />
+
+    <TextView
+        android:id="@+id/tv_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view28"
+        app:layout_constraintEnd_toEndOf="@id/view28"
+        app:layout_constraintStart_toStartOf="@id/view28"
+        app:layout_constraintTop_toTopOf="@id/view28" />
+
+    <TextView
+        android:id="@+id/tv_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view27"
+        app:layout_constraintEnd_toEndOf="@id/view27"
+        app:layout_constraintStart_toStartOf="@id/view27"
+        app:layout_constraintTop_toTopOf="@id/view27" />
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view22"
+        app:layout_constraintEnd_toEndOf="@id/view22"
+        app:layout_constraintStart_toStartOf="@id/view22"
+        app:layout_constraintTop_toTopOf="@id/view22" />
+
+    <ImageView
+        android:id="@+id/tv_trashbin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_delete_outline_24"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view35"
+        app:layout_constraintEnd_toEndOf="@id/view35"
+        app:layout_constraintStart_toStartOf="@id/view35"
+        app:layout_constraintTop_toTopOf="@id/view35" />
+
+    <ImageView
+        android:id="@+id/textView24"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/baseline_backspace_24"
+        app:layout_constraintBottom_toBottomOf="@id/view39"
+        app:layout_constraintEnd_toEndOf="@id/view39"
+        app:layout_constraintStart_toStartOf="@id/view39"
+        app:layout_constraintTop_toTopOf="@id/view39" />
+
+    <TextView
+        android:id="@+id/tv_."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/view37"
+        app:layout_constraintEnd_toEndOf="@id/view37"
+        app:layout_constraintStart_toStartOf="@id/view37"
+        app:layout_constraintTop_toTopOf="@id/view37" />
+
+    <TextView
+        android:id="@+id/tv_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view21"
+        app:layout_constraintEnd_toEndOf="@id/view21"
+        app:layout_constraintStart_toStartOf="@id/view21"
+        app:layout_constraintTop_toTopOf="@id/view21" />
+
+    <ImageView
+        android:id="@+id/textView25"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/baseline_check_24"
+        app:layout_constraintBottom_toBottomOf="@id/view40"
+        app:layout_constraintEnd_toEndOf="@id/view40"
+        app:layout_constraintStart_toStartOf="@id/view40"
+        app:layout_constraintTop_toTopOf="@id/view40" />
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view33"
+        app:layout_constraintEnd_toEndOf="@id/view33"
+        app:layout_constraintStart_toStartOf="@id/view33"
+        app:layout_constraintTop_toTopOf="@id/view33" />
+
+    <TextView
+        android:id="@+id/tv_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view38"
+        app:layout_constraintEnd_toEndOf="@id/view38"
+        app:layout_constraintStart_toStartOf="@id/view38"
+        app:layout_constraintTop_toTopOf="@id/view38" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view34"
+        app:layout_constraintEnd_toEndOf="@id/view34"
+        app:layout_constraintStart_toStartOf="@id/view34"
+        app:layout_constraintTop_toTopOf="@id/view34" />
+
+    <TextView
+        android:id="@+id/tv_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view29"
+        app:layout_constraintEnd_toEndOf="@id/view29"
+        app:layout_constraintStart_toStartOf="@id/view29"
+        app:layout_constraintTop_toTopOf="@id/view29" />
+
+    <ImageView
+        android:id="@+id/iv_dropdown"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/baseline_arrow_drop_down_24"
+        app:layout_constraintBottom_toBottomOf="@id/view30"
+        app:layout_constraintEnd_toEndOf="@id/view30"
+        app:layout_constraintStart_toStartOf="@id/view30"
+        app:layout_constraintTop_toTopOf="@id/view30" />
+
+    <TextView
+        android:id="@+id/tv_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view26"
+        app:layout_constraintEnd_toEndOf="@id/view26"
+        app:layout_constraintStart_toStartOf="@id/view26"
+        app:layout_constraintTop_toTopOf="@id/view26" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="175dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="188dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toEndOf="@+id/pie_chart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view32"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#8CD36C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_budget2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budget"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view32"
+        app:layout_constraintEnd_toEndOf="@id/view32"
+        app:layout_constraintStart_toStartOf="@+id/view32"
+        app:layout_constraintTop_toTopOf="@+id/view32" />
+
+    <ImageView
+        android:id="@+id/btnBack3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Tombol Kembali"
+        android:src="@drawable/baseline_keyboard_backspace_24_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pie_chart"
+        android:layout_width="151dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_monthlybudget" />
+
+    <TextView
+        android:id="@+id/tv_monthlybudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:text="Monthly Budget"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/pie_chart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view32" />
+
+    <TextView
+        android:id="@+id/tv_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="72dp"
+        android:text="Remaining :"
+        android:textColor="#090909"
+        app:layout_constraintStart_toEndOf="@+id/pie_chart"
+        app:layout_constraintTop_toBottomOf="@+id/view32" />
+
+    <TextView
+        android:id="@+id/tv_budget4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Budget :"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="@+id/tv_remaining"
+        app:layout_constraintTop_toBottomOf="@+id/tv_remaining" />
+
+    <TextView
+        android:id="@+id/tv_expanses4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Expenses :"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="@+id/tv_remaining"
+        app:layout_constraintTop_toBottomOf="@+id/tv_budget4" />
+
+    <TextView
+        android:id="@+id/tv_nilai_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="32dp"
+        android:text="-4000"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view32" />
+
+    <TextView
+        android:id="@+id/tv_nilai_budget4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:text="0"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nilai_remaining" />
+
+    <TextView
+        android:id="@+id/tv_nilai_expanses4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="4000"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nilai_budget4" />
+
+    <TextView
+        android:id="@+id/tv_monthlybudget5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly Budget"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/view20"
+        app:layout_constraintStart_toStartOf="@+id/view20"
+        app:layout_constraintTop_toTopOf="@+id/view19" />
+
+    <TextView
+        android:id="@+id/tv_00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view20"
+        app:layout_constraintEnd_toEndOf="@+id/view20"
+        app:layout_constraintTop_toTopOf="@+id/view20" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

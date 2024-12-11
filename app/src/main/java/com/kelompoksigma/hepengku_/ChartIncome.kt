@@ -1,6 +1,5 @@
 package com.kelompoksigma.hepengku_
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
@@ -19,11 +17,11 @@ import com.github.mikephil.charting.utils.ColorTemplate
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class ChartFragment : Fragment() {
+class ChartIncome : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
-    private lateinit var navExpense: TextView // Tambahkan TextView untuk EXPENSE
+    private lateinit var navExpenseee: TextView // Tambahkan TextView untuk EXPENSE
     private lateinit var pieChart: PieChart
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,16 +36,15 @@ class ChartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate layout fragment_chart_income.xml dan kembalikan sebagai View
-        val view = inflater.inflate(R.layout.fragment_chart, container, false)
+        // Inflate layout fragment_chart.xml dan kembalikan sebagai View
+        val view = inflater.inflate(R.layout.fragment_chart_income, container, false)
 
-        // Inisialisasi TextView Income
-        navExpense = view.findViewById(R.id.navExpense)
-        navExpense.setOnClickListener {
+        // Inisialisasi TextView EXPENSE
+        navExpenseee = view.findViewById(R.id.navExpenseee)
+        navExpenseee.setOnClickListener {
             // Navigasi menggunakan Navigation Component
-            findNavController().navigate(R.id.chartIncomeFragment)
+            findNavController().navigate(R.id.chartFragment)
         }
-
 
         // Inisialisasi PieChart dari layout
         pieChart = view.findViewById(R.id.pie_chart)
@@ -83,7 +80,7 @@ class ChartFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ChartFragment().apply {
+            ChartIncome().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

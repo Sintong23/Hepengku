@@ -11,7 +11,7 @@
     <View
         android:id="@+id/view4"
         android:layout_width="410dp"
-        android:layout_height="50dp"
+        android:layout_height="80dp"
         android:background="#8DD46C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,11 +21,12 @@
         android:id="@+id/iv_statistic"
         android:layout_width="290dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/rounded_view_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view9" />
+        app:layout_constraintTop_toBottomOf="@id/view4"
+        app:layout_constraintBottom_toTopOf="@id/view7"/>
 
     <TextView
         android:id="@+id/tv_month7"
@@ -49,28 +50,6 @@
         app:layout_constraintEnd_toEndOf="@id/view4"
         app:layout_constraintStart_toStartOf="@id/view4"
         app:layout_constraintTop_toTopOf="@id/view4"
-        />
-
-    <View
-        android:id="@+id/view9"
-        android:layout_width="410dp"
-        android:layout_height="65dp"
-        android:background="#9FCA54"
-        app:layout_constraintBottom_toTopOf="@id/iv_statistic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view4"
-        />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:src="@drawable/image_removebg_preview__6_"
-        app:layout_constraintBottom_toBottomOf="@id/view9"
-        app:layout_constraintStart_toStartOf="@id/view9"
-        app:layout_constraintTop_toTopOf="@id/view9"
         />
 
     <TextView
@@ -180,15 +159,25 @@
         app:layout_constraintEnd_toEndOf="@+id/view7"
         app:layout_constraintTop_toTopOf="@+id/view7" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="92dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:indeterminateDuration="3600"
-        android:mirrorForRtl="false"
+    <!--    <ProgressBar-->
+    <!--        android:id="@+id/progressBar"-->
+    <!--        style="?android:attr/progressBarStyle"-->
+    <!--        android:layout_width="92dp"-->
+    <!--        android:layout_height="109dp"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginTop="56dp"-->
+    <!--        android:indeterminateDuration="3600"-->
+    <!--        android:mirrorForRtl="false"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/view7"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/view7" />-->
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pie_chart"
+        android:layout_width="151dp"
+        android:layout_height="137dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view7"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
         app:layout_constraintStart_toStartOf="@+id/view7"
         app:layout_constraintTop_toTopOf="@+id/view7" />
 
