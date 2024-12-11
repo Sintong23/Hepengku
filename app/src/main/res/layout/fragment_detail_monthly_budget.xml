@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMonthly">
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="175dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="188dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toEndOf="@+id/pie_chart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view42"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#F7F7F7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view41"
+        android:layout_width="205dp"
+        android:layout_height="60dp"
+        android:background="@drawable/view_rounded_6"
+        app:layout_constraintBottom_toBottomOf="@id/view42"
+        app:layout_constraintEnd_toEndOf="@id/view42"
+        app:layout_constraintStart_toStartOf="@id/view42"
+        app:layout_constraintTop_toTopOf="@+id/view42" />
+
+    <View
+        android:id="@+id/view32"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#8CD36C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_budget2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budget"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view32"
+        app:layout_constraintEnd_toEndOf="@id/view32"
+        app:layout_constraintStart_toStartOf="@+id/view32"
+        app:layout_constraintTop_toTopOf="@+id/view32" />
+
+    <ImageView
+        android:id="@+id/btnBack3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Tombol Kembali"
+        android:src="@drawable/baseline_keyboard_backspace_24_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pie_chart"
+        android:layout_width="151dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_monthlybudget" />
+
+    <TextView
+        android:id="@+id/tv_monthlybudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:text="Monthly Budget"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/pie_chart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view32" />
+
+    <TextView
+        android:id="@+id/tv_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="72dp"
+        android:text="Remaining :"
+        android:textColor="#090909"
+        app:layout_constraintStart_toEndOf="@+id/pie_chart"
+        app:layout_constraintTop_toBottomOf="@+id/view32" />
+
+    <TextView
+        android:id="@+id/tv_budget4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Budget :"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="@+id/tv_remaining"
+        app:layout_constraintTop_toBottomOf="@+id/tv_remaining" />
+
+    <TextView
+        android:id="@+id/tv_expanses4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Expenses :"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="@+id/tv_remaining"
+        app:layout_constraintTop_toBottomOf="@+id/tv_budget4" />
+
+    <TextView
+        android:id="@+id/tv_nilai_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="32dp"
+        android:text="-4000"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view32" />
+
+    <TextView
+        android:id="@+id/tv_nilai_budget4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:text="0"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nilai_remaining" />
+
+    <TextView
+        android:id="@+id/tv_nilai_expanses4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="4000"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nilai_budget4" />
+
+    <TextView
+        android:id="@+id/tv_editbudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/view41"
+        app:layout_constraintEnd_toEndOf="@+id/view41"
+        app:layout_constraintStart_toStartOf="@+id/view41"
+        app:layout_constraintTop_toTopOf="@+id/view41" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
