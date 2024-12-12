@@ -23,10 +23,10 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        // Tambahkan tombol untuk navigasi ke EditProfile
-//        binding.btnEditProfile.setOnClickListener {
-//            findNavController().navigate(R.id.EditBudgetMonthly)
-//        }
+        // Tambahkan tombol untuk navigasi ke EditProfile
+        binding.btnEditProfile.setOnClickListener {
+            findNavController().navigate(R.id.editProfileFragment) // Pastikan ID ini ada di main_nav.xml
+        }
     }
 
     override fun onDestroyView() {

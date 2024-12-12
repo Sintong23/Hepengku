@@ -41,7 +41,7 @@ class DetailMonthly : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate layout fragment_chart.xml dan kembalikan sebagai View
-        val view = inflater.inflate(R.layout.fragment_report, container, false)
+        val view = inflater.inflate(R.layout.fragment_detail_monthly_budget, container, false)
 
         // Inisialisasi PieChart dari layout
         pieChart = view.findViewById(R.id.pie_chart)
