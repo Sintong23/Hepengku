@@ -314,6 +314,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view8" />
 
+    <TextView
+        android:id="@+id/tv_income1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INCOME"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/view15"
+        app:layout_constraintEnd_toEndOf="@+id/view15"
+        app:layout_constraintStart_toStartOf="@+id/view15"
+        app:layout_constraintTop_toTopOf="@+id/view15" />
+
     <View
         android:id="@+id/view8"
         android:layout_width="match_parent"
@@ -343,17 +354,6 @@
         app:layout_constraintEnd_toStartOf="@+id/view15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view8" />
-
-    <TextView
-        android:id="@+id/tv_income1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="INCOME"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/view15"
-        app:layout_constraintEnd_toEndOf="@+id/view15"
-        app:layout_constraintStart_toStartOf="@+id/view15"
-        app:layout_constraintTop_toTopOf="@+id/view15" />
 
     <TextView
         android:id="@+id/tv_expansess"
