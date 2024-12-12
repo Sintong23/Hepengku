@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.kelompoksigma.hepengku_.databinding.FragmentEditProfileBinding
 
 class EditProfile : Fragment() {
@@ -20,8 +21,12 @@ class EditProfile : Fragment() {
         return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Navigasi kembali ke fragment sebelumnya
+        binding.btnBack4.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 }
