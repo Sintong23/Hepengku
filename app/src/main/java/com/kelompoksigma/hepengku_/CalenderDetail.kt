@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.kelompoksigma.hepengku_.databinding.FragmentCalenderDetailBinding
@@ -26,17 +27,18 @@ class CalenderDetail : Fragment() {
 
         // Navigasi kembali ke HomeFragment saat tombol back ditekan
         binding.btnBack.setOnClickListener {
-            findNavController().navigateUp() // Kembali ke fragment sebelumnya
+            findNavController().navigate(R.id.homeFragment)
         }
 
         // Referensi ke CalendarView
         val calendarView = binding.calendarView
 
         // Listener ketika tanggal dipilih
-        calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
+        binding.calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val selectedDate = "$dayOfMonth/${month + 1}/$year"
-            // Tampilkan pesan kepada user (Opsional)
-            Toast.makeText(requireContext(), "Tanggal Dipilih: $selectedDate", Toast.LENGTH_SHORT).show()
+            // Navigasi ke DetailCalender dengan membawa data tanggal
+            val bundle = bundleOf("selectedDate" to selectedDate)
+            findNavController().navigate(R.id.DetailCalenderFragment, bundle)
         }
     }
 

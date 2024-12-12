@@ -10,36 +10,27 @@ import androidx.navigation.fragment.findNavController
 import com.kelompoksigma.hepengku_.databinding.FragmentHomeBinding
 import java.util.Calendar
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
+    // Simulasi data transaksi
+    private val transactions = listOf(
+        Transaction(type = "income", amount = 5000.0),
+        Transaction(type = "expense", amount = 2000.0),
+        Transaction(type = "income", amount = 3000.0),
+        Transaction(type = "expense", amount = 1000.0)
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Gunakan View Binding
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -52,6 +43,34 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.calenderDetailFragment)
         }
 
+        //redirect ke halaman detail_static
+        binding.nilaiExpensee.setOnClickListener {
+            findNavController().navigate(R.id.detail_statistic)
+        }
+
+        binding.nilaiIncomee.setOnClickListener {
+            findNavController().navigate(R.id.detail_statistic)
+        }
+
+        binding.nilaiBalancee.setOnClickListener {
+            findNavController().navigate(R.id.detail_statistic)
+        }
+
+        //redirect ke halaman detail
+        binding.view3.setOnClickListener {
+            findNavController().navigate(R.id.detailFragment)
+        }
+
+//        // Perhitungan income, expense, dan balance
+//        val totalIncome = transactions.filter { it.type == "income" }.sumOf { it.amount }
+//        val totalExpense = transactions.filter { it.type == "expense" }.sumOf { it.amount }
+//        val balance = totalIncome - totalExpense
+//
+//        // Tampilkan hasil di tampilan
+//        binding.tvIncome.text = "Income: Rp$totalIncome"
+//        binding.tvExpanses.text = "Expense: Rp$totalExpense"
+//        binding.tvBalance.text = "Balance: Rp$balance"
+
         // Ambil tanggal saat ini
         val calendar = Calendar.getInstance()
         val currentYear = calendar.get(Calendar.YEAR)
@@ -61,13 +80,11 @@ class HomeFragment : Fragment() {
         // Akses TextView dari binding
         val tvMonth = binding.tvMonth
 
-        // Buat TextView bisa ditekan
+        // Buat TextView bisa ditekan untuk memilih bulan
         tvMonth.setOnClickListener {
-            // Tampilkan DatePickerDialog
             val datePickerDialog = DatePickerDialog(
                 requireContext(),
                 { _, year, month, _ ->
-                    // Ubah angka bulan (0-11) menjadi nama bulan
                     val monthName = getMonthName(month)
                     tvMonth.text = "$monthName $year"
                 },
@@ -77,7 +94,6 @@ class HomeFragment : Fragment() {
         }
     }
 
-    // Fungsi untuk mengonversi angka bulan (0-11) menjadi nama bulan
     private fun getMonthName(month: Int): String {
         val months = arrayOf(
             "Januari", "Februari", "Maret",
@@ -93,24 +109,6 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+    // Data class untuk transaksi
+    data class Transaction(val type: String, val amount: Double)
 }

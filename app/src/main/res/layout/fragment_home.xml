@@ -327,7 +327,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_nilai_income"
+            android:id="@+id/nilaiIncomee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1.000.000"
@@ -351,7 +351,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_nilai_balance"
+            android:id="@+id/nilaiBalancee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -400,7 +400,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_nilai_expanses"
+            android:id="@+id/nilaiExpensee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="500.000"
