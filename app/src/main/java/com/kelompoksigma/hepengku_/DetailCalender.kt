@@ -49,6 +49,11 @@ class DetailCalender : Fragment() {
             findNavController().navigate(R.id.calenderDetailFragment)
         }
 
+        // Navigasi ke addExpense saat imageView11 ditekan
+        binding.imageView11.setOnClickListener {
+            findNavController().navigate(R.id.addExpensesFragment)
+        }
+
 
     }
 

@@ -42,6 +42,10 @@ class AddExpensesFragment : Fragment() {
         binding.view15.setOnClickListener {
             findNavController().navigate(R.id.addIncomeFragment) // Pastikan ID ini ada di main_nav.xml
         }
+
+        binding.tvCancel.setOnClickListener {
+            findNavController().navigateUp() // Kembali ke fragment
+        }
     }
 
     companion object {
