@@ -292,7 +292,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="110dp"
         android:src="@drawable/car"
-        app:layout_constraintStart_toEndOf="@id/iv_beauty"
+        app:layout_constraintStart_toEndOf="@id/ivbeauty"
         app:layout_constraintTop_toTopOf="@+id/view8"
         app:layout_constraintEnd_toStartOf="@id/iv_education"/>
 
@@ -379,7 +379,7 @@
         app:layout_constraintTop_toTopOf="@+id/view14" />
 
     <ImageView
-        android:id="@+id/iv_beauty"
+        android:id="@+id/ivbeauty"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="110dp"
@@ -394,8 +394,17 @@
         android:layout_height="wrap_content"
         android:text="Cosmetics"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_beauty"
-        app:layout_constraintStart_toStartOf="@+id/iv_beauty"
-        app:layout_constraintTop_toBottomOf="@+id/iv_beauty" />
+        app:layout_constraintEnd_toEndOf="@+id/ivbeauty"
+        app:layout_constraintStart_toStartOf="@+id/ivbeauty"
+        app:layout_constraintTop_toBottomOf="@+id/ivbeauty" />
+
+    <FrameLayout
+        android:id="@+id/custom_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

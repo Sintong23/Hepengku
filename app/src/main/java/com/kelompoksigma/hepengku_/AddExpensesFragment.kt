@@ -18,6 +18,7 @@ class AddExpensesFragment : Fragment() {
     private var param2: String? = null
     private var _binding: FragmentAddExpensesBinding? = null
     private val binding get() = _binding!!
+    private var customKeyboard: View? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +47,60 @@ class AddExpensesFragment : Fragment() {
         binding.tvCancel.setOnClickListener {
             findNavController().navigateUp() // Kembali ke fragment
         }
+
+        // Menampilkan keyboard saat tombol Edit ditekan
+        binding.ivbeauty.setOnClickListener {
+            showCustomKeyboard()
+        }
+
+
+        // Menambahkan listener untuk mendeteksi klik di luar keyboard
+        binding.root.setOnTouchListener { v, event ->
+            val keyboardContainer = binding.root.findViewById<ViewGroup>(R.id.custom_keyboard)
+            if (keyboardContainer.visibility == View.VISIBLE) {
+                val rect = IntArray(2)
+                keyboardContainer.getLocationOnScreen(rect)
+                val x = event.rawX
+                val y = event.rawY
+
+                // Periksa apakah area yang ditekan berada di luar keyboard
+                if (!(x >= rect[0] && x <= rect[0] + keyboardContainer.width &&
+                            y >= rect[1] && y <= rect[1] + keyboardContainer.height)) {
+                    hideCustomKeyboard()
+                }
+            }
+            false // Jangan cegah event sentuh lainnya
+        }
+    }
+
+    /**
+     * Menampilkan custom keyboard
+     */
+    private fun showCustomKeyboard() {
+        val keyboardContainer = binding.root.findViewById<ViewGroup>(R.id.custom_keyboard)
+        if (customKeyboard == null) {
+            // Inflate custom keyboard dari layout jika belum ada
+            customKeyboard = LayoutInflater.from(requireContext()).inflate(
+                R.layout.custom_keyboard,
+                keyboardContainer,
+                false
+            )
+        }
+
+        // Tambahkan keyboard ke container jika belum ada
+        if (keyboardContainer.childCount == 0) {
+            keyboardContainer.addView(customKeyboard)
+        }
+
+        keyboardContainer.visibility = View.VISIBLE
+    }
+
+    /**
+     * Menyembunyikan custom keyboard
+     */
+    private fun hideCustomKeyboard() {
+        val keyboardContainer = binding.root.findViewById<ViewGroup>(R.id.custom_keyboard)
+        keyboardContainer.visibility = View.GONE
     }
 
     companion object {
