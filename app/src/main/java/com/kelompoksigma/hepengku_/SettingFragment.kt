@@ -23,9 +23,24 @@ class SettingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Tambahkan tombol untuk navigasi ke profile
+        binding.btnBack4.setOnClickListener {
+            findNavController().navigate(R.id.profileFragment) // Pastikan ID ini ada di main_nav.xml
+        }
+
        // Tambahkan tombol untuk navigasi ke EditProfile
         binding.view43.setOnClickListener {
             findNavController().navigate(R.id.syaratDanKetentuan) // Pastikan ID ini ada di main_nav.xml
+        }
+
+        // Tambahkan tombol untuk navigasi ke kebijakan dan privasi
+        binding.view44.setOnClickListener {
+            findNavController().navigate(R.id.kebijakanPrivasi) // Pastikan ID ini ada di main_nav.xml
+        }
+
+        // Tambahkan tombol untuk navigasi ke tentang kami
+        binding.view45.setOnClickListener {
+            findNavController().navigate(R.id.tentangKami) // Pastikan ID ini ada di main_nav.xml
         }
 
 

@@ -90,5 +90,14 @@
         android:name="com.kelompoksigma.hepengku_.syaratDanKetentuan"
         android:label="Pengaturan"
         tools:layout="@layout/fragment_syarat_dan_ketentuan" />
-
+    <fragment
+        android:id="@+id/kebijakanPrivasi"
+        android:name="com.kelompoksigma.hepengku_.kebijakanPrivasi"
+        android:label="Pengaturan"
+        tools:layout="@layout/fragment_kebijakan_privasi" />
+    <fragment
+        android:id="@+id/tentangKami"
+        android:name="com.kelompoksigma.hepengku_.tentangKami"
+        android:label="Pengaturan"
+        tools:layout="@layout/fragment_tentang_kami" />
 </navigation>
