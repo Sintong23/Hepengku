@@ -25,7 +25,7 @@ class EditProfile : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Navigasi kembali ke fragment sebelumnya
-        binding.btnBack4.setOnClickListener {
+        binding.btnBack3.setOnClickListener {
             findNavController().navigateUp()
         }
     }

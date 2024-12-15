@@ -44,8 +44,9 @@ class AddExpensesFragment : Fragment() {
             findNavController().navigate(R.id.addIncomeFragment) // Pastikan ID ini ada di main_nav.xml
         }
 
+        // Tombol untuk navigasi ke home sebelumnya
         binding.tvCancel.setOnClickListener {
-            findNavController().navigateUp() // Kembali ke fragment
+            findNavController().navigate(R.id.homeFragment)
         }
 
         // Menampilkan keyboard saat tombol Edit ditekan
