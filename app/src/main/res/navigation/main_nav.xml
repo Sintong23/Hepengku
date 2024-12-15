@@ -85,6 +85,10 @@
         android:name="com.kelompoksigma.hepengku_.SettingFragment"
         android:label="Pengaturan"
         tools:layout="@layout/fragment_setting" />
-
+    <fragment
+        android:id="@+id/syaratDanKetentuan"
+        android:name="com.kelompoksigma.hepengku_.syaratDanKetentuan"
+        android:label="Pengaturan"
+        tools:layout="@layout/fragment_syarat_dan_ketentuan" />
 
 </navigation>
