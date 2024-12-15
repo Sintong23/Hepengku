@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Hepengku_"
         tools:targetApi="31">
         <activity
+            android:name=".SettingFragment"
+            android:exported="false" />
+        <activity
             android:name=".EditProfile"
             android:exported="false" />
         <activity

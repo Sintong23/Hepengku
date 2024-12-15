@@ -27,6 +27,11 @@ class ProfileFragment : Fragment() {
         binding.btnEditProfile.setOnClickListener {
             findNavController().navigate(R.id.editProfileFragment) // Pastikan ID ini ada di main_nav.xml
         }
+
+        // Tambahkan tombol untuk navigasi ke EditProfile
+        binding.btnSetting.setOnClickListener {
+            findNavController().navigate(R.id.settingFragment) // Pastikan ID ini ada di main_nav.xml
+        }
     }
 
     override fun onDestroyView() {

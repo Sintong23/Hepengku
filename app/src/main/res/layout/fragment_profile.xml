@@ -78,20 +78,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-<!--    <Button-->
-<!--        android:id="@+id/btnPrivacyPolicy"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginTop="92dp"-->
-<!--        android:layout_marginEnd="16dp"-->
-<!--        android:backgroundTint="#8DD46C"-->
-<!--        android:text="Privacy Policy"-->
-<!--        android:textColor="#FFFFFF"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textView4" />-->
+    <Button
+        android:id="@+id/btnSetting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#8DD46C"
+        android:text="Privacy Policy"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 <!--    <Button-->
 <!--        android:id="@+id/btnAboutUs"-->
