@@ -9,19 +9,27 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.kelompoksigma.hepengku_.databinding.FragmentHomeBinding
 import java.util.Calendar
+import android.util.Log
+import androidx.fragment.app.viewModels
+import com.kelompoksigma.hepengku_.viewmodel.HomeViewModel
+
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    // Simulasi data transaksi
-    private val transactions = listOf(
-        Transaction(type = "income", amount = 5000.0),
-        Transaction(type = "expense", amount = 2000.0),
-        Transaction(type = "income", amount = 3000.0),
-        Transaction(type = "expense", amount = 1000.0)
-    )
+    // Inisialisasi ViewModel
+    private val homeViewModel: HomeViewModel by viewModels()
+
+//    // Simulasi data transaksi
+//    private val transactions = listOf(
+//        Transaction(type = "income", amount = 5000.0),
+//        Transaction(type = "expense", amount = 2000.0),
+//        Transaction(type = "income", amount = 3000.0),
+//        Transaction(type = "expense", amount = 1000.0)
+//    )
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +45,24 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // Observe LiveData untuk data summary
+        homeViewModel.summaryData.observe(viewLifecycleOwner) { summary ->
+            Log.d("HomeFragment", "Data dari API: Income=${summary.income}, Expense=${summary.expense}, Balance=${summary.balance}")
+            binding.nilaiIncomee.text = "Rp ${summary.income}"
+            binding.nilaiExpensee.text = "Rp ${summary.expense}"
+            binding.nilaiBalancee.text = "Rp ${summary.balance}"
+        }
+
+        // Observe LiveData untuk error
+        homeViewModel.error.observe(viewLifecycleOwner) { errorMessage ->
+            binding.nilaiIncomee.text = errorMessage
+//            binding.nilaiExpensee.text = errorMessage
+//            binding.nilaiBalancee.text = errorMessage
+        }
+
+        // Fetch data dari ViewModel
+        homeViewModel.fetchSummaryData()
 
         // Navigasi ke fragment_calender_detail saat imageView5 ditekan
         binding.imageView5.setOnClickListener {
@@ -60,6 +86,9 @@ class HomeFragment : Fragment() {
         binding.view3.setOnClickListener {
             findNavController().navigate(R.id.detailFragment)
         }
+
+
+
 
 //        // Perhitungan income, expense, dan balance
 //        val totalIncome = transactions.filter { it.type == "income" }.sumOf { it.amount }
@@ -93,6 +122,35 @@ class HomeFragment : Fragment() {
             datePickerDialog.show()
         }
     }
+
+//    private fun fetchSummaryData() {
+//        RetrofitInstance.api.getSummary().enqueue(object : Callback<SummaryResponse> {
+//            override fun onResponse(call: Call<SummaryResponse>, response: Response<SummaryResponse>) {
+//                if (response.isSuccessful) {
+//                    val summary = response.body()
+//                    summary?.let {
+//                        // Log respons untuk debugging
+//                        Log.d("API_RESPONSE", "Income: ${it.income}, Expense: ${it.expense}, Balance: ${it.balance}")
+//
+//                        // Update TextView dengan data dari API
+//                        binding.nilaiIncomee.text = "Rp ${it.income}"
+//                        binding.nilaiExpensee.text = "Rp ${it.expense}"
+//                        binding.nilaiBalancee.text = "Rp ${it.balance}"
+//                    }
+//                } else {
+//                    Log.e("API_ERROR", "Response Code: ${response.code()}, Message: ${response.message()}")
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<SummaryResponse>, t: Throwable) {
+//                Log.e("API_FAILURE", "Error: ${t.message}")
+//                binding.nilaiIncomee.text = "Error"
+//                binding.nilaiExpensee.text = "Error"
+//                binding.nilaiBalancee.text = "Error"
+//            }
+//        })
+//    }
+
 
     private fun getMonthName(month: Int): String {
         val months = arrayOf(
