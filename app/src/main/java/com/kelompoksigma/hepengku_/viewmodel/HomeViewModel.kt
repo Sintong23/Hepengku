@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.kelompoksigma.hepengku_.retrovit.RetrofitInstance
 import com.kelompoksigma.hepengku_.retrovit.SummaryResponse
+import com.kelompoksigma.hepengku_.retrovit.Transaction
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -35,4 +36,29 @@ class HomeViewModel : ViewModel() {
             }
         })
     }
+
+
+    private val _transactions = MutableLiveData<List<Transaction>>()
+    val transactions: LiveData<List<Transaction>> get() = _transactions
+
+    // Fungsi untuk mengambil data transaksi dari API
+    fun fetchTransactions() {
+        RetrofitInstance.api.getTransactions().enqueue(object : Callback<List<Transaction>> {
+            override fun onResponse(call: Call<List<Transaction>>, response: Response<List<Transaction>>) {
+                if (response.isSuccessful) {
+                    _transactions.postValue(response.body()) // Set nilai transaksi
+                }
+            }
+
+            override fun onFailure(call: Call<List<Transaction>>, t: Throwable) {
+                // Log error jika terjadi kegagalan
+                t.printStackTrace()
+            }
+        })
+    }
+
+
+
+
+
 }

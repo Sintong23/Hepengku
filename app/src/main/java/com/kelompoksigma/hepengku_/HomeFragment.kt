@@ -11,7 +11,11 @@ import com.kelompoksigma.hepengku_.databinding.FragmentHomeBinding
 import java.util.Calendar
 import android.util.Log
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.kelompoksigma.hepengku_.viewmodel.HomeViewModel
+import com.kelompoksigma.hepengku_.adapter.TransactionAdapter
+
+
 
 
 class HomeFragment : Fragment() {
@@ -61,8 +65,35 @@ class HomeFragment : Fragment() {
 //            binding.nilaiBalancee.text = errorMessage
         }
 
-        // Fetch data dari ViewModel
+        // Observe LiveData untuk transaksi (RecyclerView)
+        homeViewModel.transactions.observe(viewLifecycleOwner) { transactions ->
+            // Kelompokkan transaksi berdasarkan tanggal
+            val groupedTransactions = transactions.groupBy { it.date }
+
+            // Set adapter ke RecyclerView
+            val adapter = TransactionAdapter(groupedTransactions)
+            binding.recyclerViewTransactions.layoutManager = LinearLayoutManager(requireContext())
+            binding.recyclerViewTransactions.adapter = adapter
+        }
+
+        // Ambil data summary dan transaksi dari ViewModel
         homeViewModel.fetchSummaryData()
+        homeViewModel.fetchTransactions()
+
+
+
+
+            // Observe LiveData untuk transaksi
+            homeViewModel.transactions.observe(viewLifecycleOwner) { transactions ->
+                val groupedTransactions = transactions.groupBy { it.date } // Kelompokkan transaksi berdasarkan tanggal
+                val adapter = TransactionAdapter(groupedTransactions)
+                binding.recyclerViewTransactions.layoutManager = LinearLayoutManager(requireContext())
+                binding.recyclerViewTransactions.adapter = adapter
+            }
+
+            // Ambil data transaksi dari ViewModel
+            homeViewModel.fetchTransactions()
+
 
         // Navigasi ke fragment_calender_detail saat imageView5 ditekan
         binding.imageView5.setOnClickListener {
@@ -83,9 +114,9 @@ class HomeFragment : Fragment() {
         }
 
         //redirect ke halaman detail
-        binding.view3.setOnClickListener {
-            findNavController().navigate(R.id.detailFragment)
-        }
+//        binding.imageView3.setOnClickListener {
+//            findNavController().navigate(R.id.homeFragment)
+//        }
 
 
 

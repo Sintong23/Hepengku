@@ -4,3 +4,14 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
 
 }
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        val nav_version = "2.6.0" // Gunakan versi terbaru
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+    }
+}

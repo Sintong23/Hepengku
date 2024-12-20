@@ -9,7 +9,16 @@
         android:id="@+id/homeFragment"
         android:name="com.kelompoksigma.hepengku_.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+
+        <!-- Action untuk navigasi ke DetailFragment -->
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+
+
     <fragment
         android:id="@+id/calenderDetailFragment"
         android:name="com.kelompoksigma.hepengku_.CalenderDetail"
@@ -55,11 +64,35 @@
         android:name="com.kelompoksigma.hepengku_.AddFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_add" />
+
+
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.kelompoksigma.hepengku_.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="icon"
+            app:argType="string" />
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="integer" />
+        <argument
+            android:name="date"
+            app:argType="string" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <argument
+            android:name="note"
+            app:argType="string" />
+    </fragment>
+
+
+
     <fragment
         android:id="@+id/detailmonthly"
         android:name="com.kelompoksigma.hepengku_.DetailMonthly"
