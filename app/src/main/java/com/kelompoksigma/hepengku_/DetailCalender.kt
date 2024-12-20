@@ -23,7 +23,7 @@ class DetailCalender : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         _binding = FragmentDetailCalenderBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -31,22 +31,33 @@ class DetailCalender : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Ambil tanggal dari argumen
-        val rawDate = arguments?.getString("selectedDate") ?: ""
+        // Ambil tanggal dari argument
+        val selectedDate = arguments?.getString("selectedDate") ?: ""
+        Log.d("DetailCalender", "Selected Date: $selectedDate")
 
-        // Format ulang jika diperlukan (opsional)
-        val selectedDate = try {
-            SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(
-                SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse(rawDate)
-            )
-        } catch (e: Exception) {
-            rawDate // Jika gagal, gunakan rawDate
+        // Format tanggal ke format baru
+        val formattedDate = formatToReadableDate(selectedDate)
+        binding.tvTanggal.text = formattedDate
+
+        // Atur tombol kembali
+        binding.btnBack2.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
-        binding.tvTanggal.text = selectedDate
-
-        // Ambil data transaksi berdasarkan tanggal
+        // Load data transaksi berdasarkan tanggal
         loadTransactionData(selectedDate)
+    }
+
+    private fun formatToReadableDate(date: String): String {
+        return try {
+            val originalFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+            val targetFormat = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+            val parsedDate = originalFormat.parse(date)
+            parsedDate?.let { targetFormat.format(it) } ?: date
+        } catch (e: Exception) {
+            Log.e("DetailCalender", "Error formatting date: ${e.message}")
+            date
+        }
     }
 
     private fun loadTransactionData(date: String) {
@@ -59,7 +70,7 @@ class DetailCalender : Fragment() {
                     val totalIncome = data?.total_income ?: 0
                     val totalExpense = data?.total_expense ?: 0
 
-                    // Update income and expense
+                    // Update total income and expense
                     binding.totalIncome.text = "Income: Rp ${String.format("%,d", totalIncome)}"
                     binding.totalExpense.text = "Expense: Rp ${String.format("%,d", totalExpense)}"
 
@@ -72,7 +83,7 @@ class DetailCalender : Fragment() {
                     Log.e("DetailCalender", "Failed to fetch data: ${response.errorBody()?.string()}")
                 }
             } catch (e: Exception) {
-                Log.e("DetailCalender", "Error: ${e.message}")
+                Log.e("DetailCalender", "Error loading transactions: ${e.message}")
             }
         }
     }

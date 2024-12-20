@@ -12,7 +12,8 @@
         android:layout_height="40dp"
         android:contentDescription="icon_description"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/tvCategory"
@@ -21,9 +22,10 @@
         android:layout_marginStart="8dp"
         android:text="Kategori"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvAmount"
         app:layout_constraintStart_toEndOf="@id/ivIcon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/tvAmount" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvAmount"
@@ -32,6 +34,7 @@
         android:layout_marginEnd="8dp"
         android:text="Rp 0"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
