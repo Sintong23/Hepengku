@@ -7,12 +7,117 @@
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
 
-    <!-- Header View -->
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:text="- Syarat dan Ketentuan ini diatur oleh hukum yang berlaku di Indonesia."
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
-    <!-- Title Profile -->
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="Hukum yang Berlaku"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
-    <!-- Profile Image -->
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:text="- Hepengku berhak mengubah Syarat dan Ketentuan ini sewaktu-waktu tanpa pemberitahuan terlebih dahulu."
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="Perubahan Syarat dan Ketentuan"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:text="- Hepengku tidak bertanggung jawab atas kerugian finansial yang mungkin terjadi akibat penggunaan aplikasi ini."
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:text="- Data yang disimpan dalam aplikasi sepenuhnya merupakan tanggung jawab pengguna."
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="Batasan Tanggung Jawab"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:text="- Dilarang menggandakan, menyebarluaskan, atau menggunakan konten aplikasi tanpa izin tertulis dari pihak Hepengku."
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Hak Cipta"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:text="- Semua konten, desain, dan fitur dalam aplikasi ini adalah milik Hepengku dan dilindungi oleh undang-undang hak cipta."
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <View
         android:id="@+id/view2"
@@ -31,74 +136,70 @@
         android:text="Syarat dan ketentuan"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Profile Name -->
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintEnd_toEndOf="@id/view2"
+        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintTop_toTopOf="@id/view2" />
 
     <ImageView
         android:id="@+id/btnBack4"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
         android:contentDescription="Tombol Kembali"
         android:src="@drawable/baseline_keyboard_backspace_24_black"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Tombol Edit Profile -->
+    <TextView
+        android:id="@+id/tv_syarat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Selamat datang di aplikasi Hepengku. Dengan menggunakan aplikasi ini, Anda dianggap telah membaca, memahami, dan menyetujui Syarat dan Ketentuan berikut"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-    <!-- Privacy Policy Button -->
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Penggunaan Aplikasi"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_syarat2" />
 
-    <!-- About Us Button -->
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:text="- Aplikasi Hepengku dirancang untuk membantu pengguna dalam mengelola anggaran pribadi. "
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <!--    <Button-->
-    <!--        android:id="@+id/btnPrivacyPolicy"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="16dp"-->
-    <!--        android:layout_marginTop="92dp"-->
-    <!--        android:layout_marginEnd="16dp"-->
-    <!--        android:backgroundTint="#8DD46C"-->
-    <!--        android:text="Privacy Policy"-->
-    <!--        android:textColor="#FFFFFF"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/textView4" />-->
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:text="- Aplikasi Hepengku dirancang untuk membantu pengguna dalam mengelola anggaran pribadi. "
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-    <!--    <Button-->
-    <!--        android:id="@+id/btnAboutUs"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="16dp"-->
-    <!--        android:layout_marginTop="24dp"-->
-    <!--        android:layout_marginEnd="16dp"-->
-    <!--        android:backgroundTint="#8DD46C"-->
-    <!--        android:text="About Us"-->
-    <!--        android:textColor="#FFFFFF"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/btnPrivacyPolicy" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/btnDeleteAll"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="16dp"-->
-    <!--        android:layout_marginTop="120dp"-->
-    <!--        android:layout_marginEnd="16dp"-->
-    <!--        android:backgroundTint="#e8092b"-->
-    <!--        android:text="Delete Data"-->
-    <!--        android:textColor="#FFFFFF"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/btnPrivacyPolicy" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,13 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
 
-    <!-- Header View -->
-
-    <!-- Title Profile -->
-
-    <!-- Profile Image -->
-
-
+    <!-- Header -->
     <View
         android:id="@+id/view2"
         android:layout_width="0dp"
@@ -28,77 +22,113 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kebijakan dan privasi"
+        android:text="Kebijakan Privasi"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Profile Name -->
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintEnd_toEndOf="@id/view2"
+        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintTop_toTopOf="@id/view2" />
 
     <ImageView
         android:id="@+id/btnBack4"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
         android:contentDescription="Tombol Kembali"
         android:src="@drawable/baseline_keyboard_backspace_24_black"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Tombol Edit Profile -->
+    <!-- Konten Kebijakan Privasi -->
+    <TextView
+        android:id="@+id/tv_syarat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Hepengku menghormati privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data Anda."
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-    <!-- Privacy Policy Button -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_syarat2"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <!-- About Us Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-    <!--    <Button-->
-    <!--        android:id="@+id/btnPrivacyPolicy"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="16dp"-->
-    <!--        android:layout_marginTop="92dp"-->
-    <!--        android:layout_marginEnd="16dp"-->
-    <!--        android:backgroundTint="#8DD46C"-->
-    <!--        android:text="Privacy Policy"-->
-    <!--        android:textColor="#FFFFFF"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/textView4" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Data yang Dikumpulkan"
+                android:textStyle="bold"
+                android:textSize="14sp" />
 
-    <!--    <Button-->
-    <!--        android:id="@+id/btnAboutUs"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="16dp"-->
-    <!--        android:layout_marginTop="24dp"-->
-    <!--        android:layout_marginEnd="16dp"-->
-    <!--        android:backgroundTint="#8DD46C"-->
-    <!--        android:text="About Us"-->
-    <!--        android:textColor="#FFFFFF"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/btnPrivacyPolicy" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="• Informasi pribadi yang Anda berikan, seperti nama dan email." />
 
-    <!--    <Button-->
-    <!--        android:id="@+id/btnDeleteAll"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="16dp"-->
-    <!--        android:layout_marginTop="120dp"-->
-    <!--        android:layout_marginEnd="16dp"-->
-    <!--        android:backgroundTint="#e8092b"-->
-    <!--        android:text="Delete Data"-->
-    <!--        android:textColor="#FFFFFF"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/btnPrivacyPolicy" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="• Data anggaran yang Anda masukkan ke dalam aplikasi." />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Penggunaan Data"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="• Data digunakan untuk memberikan layanan terbaik, seperti menyimpan dan menganalisis anggaran Anda.\n\n• Kami tidak akan menjual atau membagikan data Anda kepada pihak ketiga tanpa izin Anda." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Hak Pengguna"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="• Anda berhak meminta penghapusan data pribadi Anda dari aplikasi.\n\n• Anda dapat menghubungi kami melalui kontak yang tersedia di aplikasi." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Perubahan Kebijakan"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Kebijakan Privasi ini dapat berubah sewaktu-waktu. Kami akan memberi tahu Anda jika ada perubahan signifikan." />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
