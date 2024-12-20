@@ -1,37 +1,29 @@
 package com.kelompoksigma.hepengku_
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
+import com.kelompoksigma.hepengku_.adapter.CategoryAdapter
 import com.kelompoksigma.hepengku_.databinding.FragmentAddExpensesBinding
-
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
+import com.kelompoksigma.hepengku_.retrovit.Category
+import com.kelompoksigma.hepengku_.retrovit.RetrofitInstance
+import kotlinx.coroutines.launch
 
 class AddExpensesFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
     private var _binding: FragmentAddExpensesBinding? = null
     private val binding get() = _binding!!
-    private var customKeyboard: View? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var currentCategoryType: String = "expense" // Default type
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAddExpensesBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -39,88 +31,54 @@ class AddExpensesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Tambahkan tombol untuk navigasi ke addIncome
-        binding.view15.setOnClickListener {
-            findNavController().navigate(R.id.addIncomeFragment) // Pastikan ID ini ada di main_nav.xml
+        // Set click listener for expense button
+        binding.btnExpense.setOnClickListener {
+            currentCategoryType = "expense"
+            updateCategoryList()
         }
 
-        // Tombol untuk navigasi ke home sebelumnya
-        binding.tvCancel.setOnClickListener {
-            findNavController().navigate(R.id.homeFragment)
+        // Set click listener for income button
+        binding.btnIncome.setOnClickListener {
+            currentCategoryType = "income"
+            updateCategoryList()
         }
 
-        // Menampilkan keyboard saat tombol Edit ditekan
-        binding.ivbeauty.setOnClickListener {
-            showCustomKeyboard()
-        }
+        // Load initial category list
+        updateCategoryList()
+    }
 
+    private fun updateCategoryList() {
+        lifecycleScope.launch {
+            try {
+                val categories = RetrofitInstance.api.getCategories()
+                val filteredCategories = categories.filter { it.type == currentCategoryType }
 
-        // Menambahkan listener untuk mendeteksi klik di luar keyboard
-        binding.root.setOnTouchListener { v, event ->
-            val keyboardContainer = binding.root.findViewById<ViewGroup>(R.id.custom_keyboard)
-            if (keyboardContainer.visibility == View.VISIBLE) {
-                val rect = IntArray(2)
-                keyboardContainer.getLocationOnScreen(rect)
-                val x = event.rawX
-                val y = event.rawY
-
-                // Periksa apakah area yang ditekan berada di luar keyboard
-                if (!(x >= rect[0] && x <= rect[0] + keyboardContainer.width &&
-                            y >= rect[1] && y <= rect[1] + keyboardContainer.height)) {
-                    hideCustomKeyboard()
+                if (filteredCategories.isNullOrEmpty()) {
+                    Log.e("AddExpensesFragment", "No categories found for $currentCategoryType")
+                    // Handle UI jika kategori kosong
+                    return@launch
                 }
+
+                setupRecyclerView(filteredCategories)
+            } catch (e: Exception) {
+                Log.e("AddExpensesFragment", "Error updating categories: ${e.message}")
+                // Handle UI untuk error
             }
-            false // Jangan cegah event sentuh lainnya
         }
     }
 
-    /**
-     * Menampilkan custom keyboard
-     */
-    private fun showCustomKeyboard() {
-        val keyboardContainer = binding.root.findViewById<ViewGroup>(R.id.custom_keyboard)
-        if (customKeyboard == null) {
-            // Inflate custom keyboard dari layout jika belum ada
-            customKeyboard = LayoutInflater.from(requireContext()).inflate(
-                R.layout.custom_keyboard,
-                keyboardContainer,
-                false
-            )
+    private fun setupRecyclerView(categories: List<Category>) {
+        val adapter = CategoryAdapter(categories) { category ->
+            // Handle klik kategori
+            Log.d("AddExpensesFragment", "Selected Category: $category")
         }
 
-        // Tambahkan keyboard ke container jika belum ada
-        if (keyboardContainer.childCount == 0) {
-            keyboardContainer.addView(customKeyboard)
-        }
-
-        keyboardContainer.visibility = View.VISIBLE
+        binding.recyclerViewCategories.layoutManager = GridLayoutManager(requireContext(), 4)
+        binding.recyclerViewCategories.adapter = adapter
     }
 
-    /**
-     * Menyembunyikan custom keyboard
-     */
-    private fun hideCustomKeyboard() {
-        val keyboardContainer = binding.root.findViewById<ViewGroup>(R.id.custom_keyboard)
-        keyboardContainer.visibility = View.GONE
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AddExpensesFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AddExpensesFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

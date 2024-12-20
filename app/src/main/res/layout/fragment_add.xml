@@ -33,7 +33,7 @@
         android:src="@drawable/olahraga"
         app:layout_constraintEnd_toStartOf="@id/iv_gift"
         app:layout_constraintStart_toEndOf="@id/iv_donation"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
         android:src="@drawable/repair"
         app:layout_constraintEnd_toStartOf="@+id/iv_donation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <ImageView
         android:id="@+id/iv_gift"
@@ -72,7 +72,7 @@
         android:src="@drawable/gift"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_olahraga"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <TextView
         android:id="@+id/tv_donation"
@@ -92,7 +92,7 @@
         android:src="@drawable/donation"
         app:layout_constraintEnd_toStartOf="@id/iv_olahraga"
         app:layout_constraintStart_toEndOf="@id/iv_repair"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <TextView
         android:id="@+id/tv_repair"
@@ -112,7 +112,7 @@
         android:src="@drawable/traveling"
         app:layout_constraintEnd_toStartOf="@id/iv_transportation"
         app:layout_constraintStart_toEndOf="@id/iv_food"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <ImageView
         android:id="@+id/iv_clothing"
@@ -122,7 +122,7 @@
         android:src="@drawable/clothing"
         app:layout_constraintEnd_toStartOf="@+id/iv_food"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <ImageView
         android:id="@+id/iv_food"
@@ -132,7 +132,7 @@
         android:src="@drawable/food_"
         app:layout_constraintEnd_toStartOf="@id/iv_travelling"
         app:layout_constraintStart_toEndOf="@id/iv_clothing"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <TextView
         android:id="@+id/tv_travelling"
@@ -162,7 +162,7 @@
         android:src="@drawable/transportation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_travelling"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <TextView
         android:id="@+id/tv_transportation"
@@ -192,7 +192,7 @@
         android:src="@drawable/entertainment"
         app:layout_constraintEnd_toStartOf="@id/iv_health"
         app:layout_constraintStart_toEndOf="@+id/iv_furniture"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <ImageView
         android:id="@+id/iv_electronic"
@@ -202,7 +202,7 @@
         android:src="@drawable/electronic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_health"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <TextView
         android:id="@+id/tv_entertainment"
@@ -232,7 +232,7 @@
         android:src="@drawable/health"
         app:layout_constraintEnd_toStartOf="@id/iv_electronic"
         app:layout_constraintStart_toEndOf="@+id/iv_entertainment"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <TextView
         android:id="@+id/tv_health"
@@ -274,7 +274,7 @@
         android:src="@drawable/pet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_education"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <ImageView
         android:id="@+id/iv_education"
@@ -283,7 +283,7 @@
         android:layout_marginTop="110dp"
         android:src="@drawable/education"
         app:layout_constraintStart_toEndOf="@id/iv_car"
-        app:layout_constraintTop_toTopOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="@+id/header"
         app:layout_constraintEnd_toStartOf="@id/iv_pet"/>
 
     <ImageView
@@ -293,7 +293,7 @@
         android:layout_marginTop="110dp"
         android:src="@drawable/car"
         app:layout_constraintStart_toEndOf="@id/iv_beauty"
-        app:layout_constraintTop_toTopOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="@+id/header"
         app:layout_constraintEnd_toStartOf="@id/iv_education"/>
 
     <TextView
@@ -307,15 +307,15 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_car" />
 
     <View
-        android:id="@+id/view15"
+        android:id="@+id/btn_income"
         android:layout_width="206dp"
         android:layout_height="40dp"
         android:background="#ECECA3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view8" />
+        app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <View
-        android:id="@+id/view8"
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#8CD36C"
@@ -331,18 +331,18 @@
         android:layout_marginTop="16dp"
         android:text="ADD"
         android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/view8"
-        app:layout_constraintStart_toStartOf="@+id/view8"
-        app:layout_constraintTop_toTopOf="@id/view8" />
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@id/header" />
 
     <View
-        android:id="@+id/view14"
+        android:id="@+id/btn_expense"
         android:layout_width="206dp"
         android:layout_height="40dp"
         android:background="#B5E550"
-        app:layout_constraintEnd_toStartOf="@+id/view15"
+        app:layout_constraintEnd_toStartOf="@+id/btn_income"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view8" />
+        app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <TextView
         android:id="@+id/tv_income1"
@@ -350,10 +350,10 @@
         android:layout_height="wrap_content"
         android:text="INCOME"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/view15"
-        app:layout_constraintEnd_toEndOf="@+id/view15"
-        app:layout_constraintStart_toStartOf="@+id/view15"
-        app:layout_constraintTop_toTopOf="@+id/view15" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_income"
+        app:layout_constraintEnd_toEndOf="@+id/btn_income"
+        app:layout_constraintStart_toStartOf="@+id/btn_income"
+        app:layout_constraintTop_toTopOf="@+id/btn_income" />
 
     <TextView
         android:id="@+id/tv_expansess"
@@ -361,10 +361,10 @@
         android:layout_height="wrap_content"
         android:text="EXPENSE"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view14"
-        app:layout_constraintEnd_toEndOf="@+id/view14"
-        app:layout_constraintStart_toStartOf="@+id/view14"
-        app:layout_constraintTop_toTopOf="@+id/view14" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_expense"
+        app:layout_constraintEnd_toEndOf="@+id/btn_expense"
+        app:layout_constraintStart_toStartOf="@+id/btn_expense"
+        app:layout_constraintTop_toTopOf="@+id/btn_expense" />
 
     <ImageView
         android:id="@+id/iv_beauty"
@@ -374,7 +374,7 @@
         android:src="@drawable/beuty"
         app:layout_constraintEnd_toStartOf="@+id/iv_car"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view8" />
+        app:layout_constraintTop_toTopOf="@+id/header" />
 
     <TextView
         android:id="@+id/tv_salary"

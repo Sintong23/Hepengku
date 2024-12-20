@@ -1,0 +1,27 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- Ikon kategori -->
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="category_icon" />
+
+    <!-- Nama kategori -->
+    <TextView
+        android:id="@+id/tvCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Category"
+        android:textSize="14sp"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>

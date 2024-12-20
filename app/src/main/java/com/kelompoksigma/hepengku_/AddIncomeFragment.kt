@@ -38,10 +38,6 @@ class AddIncomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Tambahkan tombol untuk navigasi ke addIncome
-        binding.view14.setOnClickListener {
-            findNavController().navigate(R.id.addExpensesFragment) // Pastikan ID ini ada di main_nav.xml
-        }
 
         // Menampilkan keyboard saat tombol Edit ditekan
         binding.ivsalary.setOnClickListener {

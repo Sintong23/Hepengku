@@ -35,6 +35,13 @@ data class TransactionsByDateResponse(
     val total_expense: Int
 )
 
+data class Category(
+    val id: Int,
+    val name: String,
+    val icon: String, // Nama file ikon dari database
+    val type: String // Tambahkan tipe kategori
+)
+
 
 interface ApiService {
     @GET("api/summary")
@@ -53,5 +60,8 @@ interface ApiService {
     suspend fun getTransactionsByDate(
         @Path("date") date: String
     ): Response<TransactionsByDateResponse>
+
+    @GET("api/categories")
+    suspend fun getCategories(): List<Category>
 
 }

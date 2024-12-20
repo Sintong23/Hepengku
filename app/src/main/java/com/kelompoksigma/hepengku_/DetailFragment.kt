@@ -154,7 +154,7 @@ class DetailFragment : Fragment() {
             }
         }
 
-        // Pastikan keyboard terlihat
+        // Pastikan keyboard terlihat/*/*/*/**/*/*/*/
         keyboardContainer.visibility = View.VISIBLE
     }
 
@@ -182,8 +182,6 @@ class DetailFragment : Fragment() {
 
                     // Navigasi ke HomeFragment setelah berhasil
                     findNavController().navigate(R.id.action_detailFragment_to_homeFragment)
-                    Log.d("DetailFragment", "Navigasi ke HomeFragment setelah update berhasil")
-
                 } else {
                     Log.e("DetailFragment", "Error: ${response.errorBody()?.string()}")
                 }
