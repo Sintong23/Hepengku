@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".DetailFragment">
 
+
     <TableRow
         android:id="@+id/tableRow6"
         android:layout_width="match_parent"
@@ -27,21 +28,21 @@
         app:layout_constraintTop_toBottomOf="@+id/tableRow5" />
 
     <View
-        android:id="@+id/view18"
+        android:id="@+id/btn_delete"
         android:layout_width="205dp"
         android:layout_height="60dp"
         android:background="#BAE4A6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/view17" />
+        app:layout_constraintStart_toEndOf="@id/btn_edit" />
 
     <View
-        android:id="@+id/view17"
+        android:id="@+id/btn_edit"
         android:layout_width="205dp"
         android:layout_height="60dp"
         android:background="#BAE4A6"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/view18"
+        app:layout_constraintEnd_toStartOf="@id/btn_delete"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -221,10 +222,10 @@
         android:text="Edit"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/view17"
-        app:layout_constraintEnd_toEndOf="@+id/view17"
-        app:layout_constraintStart_toStartOf="@id/view17"
-        app:layout_constraintTop_toTopOf="@+id/view17" />
+        app:layout_constraintBottom_toBottomOf="@id/btn_edit"
+        app:layout_constraintEnd_toEndOf="@+id/btn_edit"
+        app:layout_constraintStart_toStartOf="@id/btn_edit"
+        app:layout_constraintTop_toTopOf="@+id/btn_edit" />
 
     <TextView
         android:id="@+id/tv_delete"
@@ -233,10 +234,10 @@
         android:text="Delete"
         android:textColor="#EB3426"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/view18"
-        app:layout_constraintEnd_toEndOf="@id/view18"
-        app:layout_constraintStart_toStartOf="@+id/view18"
-        app:layout_constraintTop_toTopOf="@+id/view18" />
+        app:layout_constraintBottom_toBottomOf="@id/btn_delete"
+        app:layout_constraintEnd_toEndOf="@id/btn_delete"
+        app:layout_constraintStart_toStartOf="@+id/btn_delete"
+        app:layout_constraintTop_toTopOf="@+id/btn_delete" />
 
     <FrameLayout
         android:id="@+id/custom_keyboard"

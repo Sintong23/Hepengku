@@ -20,15 +20,28 @@
 
 
     <fragment
-        android:id="@+id/calenderDetailFragment"
+        android:id="@+id/CalenderDetailFragment"
         android:name="com.kelompoksigma.hepengku_.CalenderDetail"
-        android:label="fragment_calender_detail"
-        tools:layout="@layout/fragment_calender_detail" />
+        android:label="Calender Detail"
+        tools:layout="@layout/fragment_calender_detail">
+        <action
+            android:id="@+id/actionCalenderDetailFragmentToDetailCalenderFragment"
+            app:destination="@id/DetailCalenderFragment" />
+    </fragment>
+
+
     <fragment
         android:id="@+id/DetailCalenderFragment"
         android:name="com.kelompoksigma.hepengku_.DetailCalender"
         android:label="fragment_detail_calender"
-        tools:layout="@layout/fragment_detail_calender" />
+        tools:layout="@layout/fragment_detail_calender">
+        <argument
+            android:name="selectedDate"
+            app:argType="string" />
+    </fragment>
+
+
+
     <fragment
         android:id="@+id/chartFragment"
         android:name="com.kelompoksigma.hepengku_.ChartFragment"
@@ -72,6 +85,9 @@
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail">
         <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
             android:name="icon"
             app:argType="string" />
         <argument
@@ -89,6 +105,10 @@
         <argument
             android:name="note"
             app:argType="string" />
+
+        <action
+            android:id="@+id/action_detailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 
 

@@ -48,6 +48,7 @@ class SingleTransactionAdapter(private val transactions: List<Transaction>) :
         // Navigasi ke DetailFragment saat item transaksi ditekan
         holder.binding.root.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(
+                id = transaction.id, // Kirim ID transaksi
                 icon = transaction.icon,
                 categoryName = transaction.category_name,
                 amount = transaction.amount,

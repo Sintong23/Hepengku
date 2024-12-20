@@ -1,5 +1,6 @@
 package com.kelompoksigma.hepengku_.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -25,13 +26,16 @@ class HomeViewModel : ViewModel() {
         RetrofitInstance.api.getSummary().enqueue(object : Callback<SummaryResponse> {
             override fun onResponse(call: Call<SummaryResponse>, response: Response<SummaryResponse>) {
                 if (response.isSuccessful) {
+                    Log.d("HomeViewModel", "Data summary berhasil: ${response.body()}")
                     _summaryData.postValue(response.body())
                 } else {
                     _error.postValue("Error: ${response.message()}")
+                    Log.e("HomeViewModel", "Error: ${response.errorBody()?.string()}")
                 }
             }
 
             override fun onFailure(call: Call<SummaryResponse>, t: Throwable) {
+                Log.e("HomeViewModel", "Failure: ${t.message}")
                 _error.postValue("Failure: ${t.message}")
             }
         })
@@ -46,12 +50,14 @@ class HomeViewModel : ViewModel() {
         RetrofitInstance.api.getTransactions().enqueue(object : Callback<List<Transaction>> {
             override fun onResponse(call: Call<List<Transaction>>, response: Response<List<Transaction>>) {
                 if (response.isSuccessful) {
+                    Log.d("HomeViewModel", "Transaksi berhasil: ${response.body()}")
                     _transactions.postValue(response.body()) // Set nilai transaksi
                 }
             }
 
             override fun onFailure(call: Call<List<Transaction>>, t: Throwable) {
                 // Log error jika terjadi kegagalan
+                Log.e("HomeViewModel", "Failure transaksi: ${t.message}")
                 t.printStackTrace()
             }
         })

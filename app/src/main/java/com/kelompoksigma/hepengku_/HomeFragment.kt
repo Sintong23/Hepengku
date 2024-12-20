@@ -67,37 +67,29 @@ class HomeFragment : Fragment() {
 
         // Observe LiveData untuk transaksi (RecyclerView)
         homeViewModel.transactions.observe(viewLifecycleOwner) { transactions ->
-            // Kelompokkan transaksi berdasarkan tanggal
-            val groupedTransactions = transactions.groupBy { it.date }
-
-            // Set adapter ke RecyclerView
-            val adapter = TransactionAdapter(groupedTransactions)
-            binding.recyclerViewTransactions.layoutManager = LinearLayoutManager(requireContext())
-            binding.recyclerViewTransactions.adapter = adapter
-        }
-
-        // Ambil data summary dan transaksi dari ViewModel
-        homeViewModel.fetchSummaryData()
-        homeViewModel.fetchTransactions()
-
-
-
-
-            // Observe LiveData untuk transaksi
-            homeViewModel.transactions.observe(viewLifecycleOwner) { transactions ->
-                val groupedTransactions = transactions.groupBy { it.date } // Kelompokkan transaksi berdasarkan tanggal
+            if (transactions.isNullOrEmpty()) {
+                Log.e("HomeFragment", "Tidak ada transaksi yang diterima dari API")
+            } else {
+                Log.d("HomeFragment", "Transaksi berhasil dimuat: ${transactions.size} item")
+                val groupedTransactions = transactions.groupBy { it.date }
                 val adapter = TransactionAdapter(groupedTransactions)
                 binding.recyclerViewTransactions.layoutManager = LinearLayoutManager(requireContext())
                 binding.recyclerViewTransactions.adapter = adapter
             }
+        }
 
-            // Ambil data transaksi dari ViewModel
-            homeViewModel.fetchTransactions()
+        // Ambil data summary dan transaksi dari ViewModel
+        homeViewModel.fetchSummaryData()
+        Log.d("HomeFragment", "fetchSummaryData() dipanggil")
+
+        homeViewModel.fetchTransactions()
+        Log.d("HomeFragment", "fetchTransactions() dipanggil")
+
 
 
         // Navigasi ke fragment_calender_detail saat imageView5 ditekan
-        binding.imageView5.setOnClickListener {
-            findNavController().navigate(R.id.calenderDetailFragment)
+        binding.iconKalender.setOnClickListener {
+            findNavController().navigate(R.id.CalenderDetailFragment) // Pastikan ID fragment di `main_nav.xml` sesuai
         }
 
         //redirect ke halaman detail_static
