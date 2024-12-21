@@ -45,8 +45,8 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 - Menambahkan pemasukan dan kategori pemasukan.
 - Menambahkan pengeluaran dan kategori pengeluaran.
 
-**5. Melihat:**
-- Statistik
+**5. Data:**
+- Statistik pemasukan dan pengeluaran
 
   
 ## **Library**
@@ -60,7 +60,8 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 
 ## **Permission**
 
-TBA
+- Internet Access Permission
+- Network State (Opsional, jika Anda ingin memastikan koneksi tersedia sebelum mengakses API) Permission
 
 ## **Environment**
 Environment untuk Pengembangan dan Testing Aplikasi Hepengku
