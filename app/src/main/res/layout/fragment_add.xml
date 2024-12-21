@@ -6,386 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".AddExpensesFragment">
 
-    <ImageView
-        android:id="@+id/iv_furniture"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="45dp"
-        android:src="@drawable/home"
-        app:layout_constraintStart_toStartOf="@+id/iv_repair"
-        app:layout_constraintTop_toBottomOf="@+id/tv_repair" />
-
-    <TextView
-        android:id="@+id/tv_furniture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Furniture"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_furniture"
-        app:layout_constraintStart_toStartOf="@+id/iv_furniture"
-        app:layout_constraintTop_toBottomOf="@+id/iv_furniture" />
-
-    <ImageView
-        android:id="@+id/iv_olahraga"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="350dp"
-        android:src="@drawable/olahraga"
-        app:layout_constraintEnd_toStartOf="@id/iv_gift"
-        app:layout_constraintStart_toEndOf="@id/iv_donation"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sports"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_olahraga"
-        app:layout_constraintStart_toStartOf="@+id/iv_olahraga"
-        app:layout_constraintTop_toBottomOf="@+id/iv_olahraga" />
-
-    <TextView
-        android:id="@+id/tv_gift"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gift"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_gift"
-        app:layout_constraintStart_toStartOf="@+id/iv_gift"
-        app:layout_constraintTop_toBottomOf="@+id/iv_gift" />
-
-    <ImageView
-        android:id="@+id/iv_repair"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="350dp"
-        android:src="@drawable/repair"
-        app:layout_constraintEnd_toStartOf="@+id/iv_donation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <ImageView
-        android:id="@+id/iv_gift"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="350dp"
-        android:src="@drawable/gift"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iv_olahraga"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <TextView
-        android:id="@+id/tv_donation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Donation"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_donation"
-        app:layout_constraintStart_toStartOf="@+id/iv_donation"
-        app:layout_constraintTop_toBottomOf="@+id/iv_donation" />
-
-    <ImageView
-        android:id="@+id/iv_donation"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="350dp"
-        android:src="@drawable/donation"
-        app:layout_constraintEnd_toStartOf="@id/iv_olahraga"
-        app:layout_constraintStart_toEndOf="@id/iv_repair"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <TextView
-        android:id="@+id/tv_repair"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Repairs"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_repair"
-        app:layout_constraintStart_toStartOf="@+id/iv_repair"
-        app:layout_constraintTop_toBottomOf="@+id/iv_repair" />
-
-    <ImageView
-        android:id="@+id/iv_travelling"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="230dp"
-        android:src="@drawable/traveling"
-        app:layout_constraintEnd_toStartOf="@id/iv_transportation"
-        app:layout_constraintStart_toEndOf="@id/iv_food"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <ImageView
-        android:id="@+id/iv_clothing"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="230dp"
-        android:src="@drawable/clothing"
-        app:layout_constraintEnd_toStartOf="@+id/iv_food"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <ImageView
-        android:id="@+id/iv_food"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="230dp"
-        android:src="@drawable/food_"
-        app:layout_constraintEnd_toStartOf="@id/iv_travelling"
-        app:layout_constraintStart_toEndOf="@id/iv_clothing"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <TextView
-        android:id="@+id/tv_travelling"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Travelling"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_travelling"
-        app:layout_constraintStart_toStartOf="@+id/iv_travelling"
-        app:layout_constraintTop_toBottomOf="@+id/iv_travelling" />
-
-    <TextView
-        android:id="@+id/tv_other"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clothing"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_clothing"
-        app:layout_constraintStart_toStartOf="@+id/iv_clothing"
-        app:layout_constraintTop_toBottomOf="@+id/iv_clothing" />
-
-    <ImageView
-        android:id="@+id/iv_transportation"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="230dp"
-        android:src="@drawable/transportation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iv_travelling"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <TextView
-        android:id="@+id/tv_transportation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Transport"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_transportation"
-        app:layout_constraintStart_toStartOf="@+id/iv_transportation"
-        app:layout_constraintTop_toBottomOf="@+id/iv_transportation" />
-
-    <TextView
-        android:id="@+id/tv_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Food"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_food"
-        app:layout_constraintStart_toStartOf="@+id/iv_food"
-        app:layout_constraintTop_toBottomOf="@+id/iv_food" />
-
-    <ImageView
-        android:id="@+id/iv_entertainment"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="468dp"
-        android:src="@drawable/entertainment"
-        app:layout_constraintEnd_toStartOf="@id/iv_health"
-        app:layout_constraintStart_toEndOf="@+id/iv_furniture"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <ImageView
-        android:id="@+id/iv_electronic"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="468dp"
-        android:src="@drawable/electronic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/iv_health"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <TextView
-        android:id="@+id/tv_entertainment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Entertainment"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_entertainment"
-        app:layout_constraintStart_toStartOf="@+id/iv_entertainment"
-        app:layout_constraintTop_toBottomOf="@+id/iv_entertainment" />
-
-    <TextView
-        android:id="@+id/tv_electronics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Electronics"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_electronic"
-        app:layout_constraintStart_toStartOf="@+id/iv_electronic"
-        app:layout_constraintTop_toBottomOf="@+id/iv_electronic" />
-
-    <ImageView
-        android:id="@+id/iv_health"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="468dp"
-        android:src="@drawable/health"
-        app:layout_constraintEnd_toStartOf="@id/iv_electronic"
-        app:layout_constraintStart_toEndOf="@+id/iv_entertainment"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <TextView
-        android:id="@+id/tv_health"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Health"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_health"
-
-        app:layout_constraintStart_toStartOf="@+id/iv_health"
-        app:layout_constraintTop_toBottomOf="@+id/iv_health" />
-
-    <TextView
-        android:id="@+id/tv_bonus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pet"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_pet"
-        app:layout_constraintStart_toStartOf="@+id/iv_pet"
-        app:layout_constraintTop_toBottomOf="@+id/iv_pet" />
-
-    <TextView
-        android:id="@+id/tv_part_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Education"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_education"
-        app:layout_constraintStart_toStartOf="@+id/iv_education"
-        app:layout_constraintTop_toBottomOf="@+id/iv_education" />
-
-    <ImageView
-        android:id="@+id/iv_pet"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="110dp"
-        android:src="@drawable/pet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iv_education"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <ImageView
-        android:id="@+id/iv_education"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="110dp"
-        android:src="@drawable/education"
-        app:layout_constraintStart_toEndOf="@id/iv_car"
-        app:layout_constraintTop_toTopOf="@+id/header"
-        app:layout_constraintEnd_toStartOf="@id/iv_pet"/>
-
-    <ImageView
-        android:id="@+id/iv_car"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="110dp"
-        android:src="@drawable/car"
-        app:layout_constraintStart_toEndOf="@id/iv_beauty"
-        app:layout_constraintTop_toTopOf="@+id/header"
-        app:layout_constraintEnd_toStartOf="@id/iv_education"/>
-
-    <TextView
-        android:id="@+id/tv_investments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Car"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_car"
-        app:layout_constraintStart_toStartOf="@+id/iv_car"
-        app:layout_constraintTop_toBottomOf="@+id/iv_car" />
-
-    <View
-        android:id="@+id/btn_income"
-        android:layout_width="206dp"
-        android:layout_height="40dp"
-        android:background="#ECECA3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
-
-    <View
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#8CD36C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="ADD"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/header"
-        app:layout_constraintStart_toStartOf="@+id/header"
-        app:layout_constraintTop_toTopOf="@id/header" />
-
-    <View
-        android:id="@+id/btn_expense"
-        android:layout_width="206dp"
-        android:layout_height="40dp"
-        android:background="#B5E550"
-        app:layout_constraintEnd_toStartOf="@+id/btn_income"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
-
-    <TextView
-        android:id="@+id/tv_income1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="INCOME"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_income"
-        app:layout_constraintEnd_toEndOf="@+id/btn_income"
-        app:layout_constraintStart_toStartOf="@+id/btn_income"
-        app:layout_constraintTop_toTopOf="@+id/btn_income" />
-
-    <TextView
-        android:id="@+id/tv_expansess"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EXPENSE"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_expense"
-        app:layout_constraintEnd_toEndOf="@+id/btn_expense"
-        app:layout_constraintStart_toStartOf="@+id/btn_expense"
-        app:layout_constraintTop_toTopOf="@+id/btn_expense" />
-
-    <ImageView
-        android:id="@+id/iv_beauty"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="110dp"
-        android:src="@drawable/beuty"
-        app:layout_constraintEnd_toStartOf="@+id/iv_car"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/header" />
-
-    <TextView
-        android:id="@+id/tv_salary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cosmetics"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_beauty"
-        app:layout_constraintStart_toStartOf="@+id/iv_beauty"
-        app:layout_constraintTop_toBottomOf="@+id/iv_beauty" />
-
     <View
         android:id="@+id/view19"
         android:layout_width="wrap_content"
@@ -393,7 +13,9 @@
         android:background="#BAE4A6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/btn_simpan"
@@ -559,24 +181,12 @@
         android:id="@+id/tv_nilai_angka"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
         android:text="0"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/container_input_text"
-        app:layout_constraintEnd_toEndOf="@id/view19"
-        app:layout_constraintTop_toTopOf="@+id/view19" />
-
-    <TextView
-        android:id="@+id/tv_note2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="Note : Enter a note..."
-        android:textColor="#8A8989"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/container_input_text"
+        app:layout_constraintEnd_toEndOf="@+id/container_input_text"
         app:layout_constraintStart_toStartOf="@+id/container_input_text"
-        app:layout_constraintTop_toTopOf="@+id/container_input_text" />
+        app:layout_constraintTop_toTopOf="@+id/view19" />
 
     <TextView
         android:id="@+id/tv_7"
@@ -611,16 +221,6 @@
         app:layout_constraintStart_toStartOf="@id/btn_9"
         app:layout_constraintTop_toTopOf="@id/btn_9" />
 
-    <ImageView
-        android:id="@+id/iv_dropdown"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:src="@drawable/baseline_calendar_month_24"
-        app:layout_constraintStart_toStartOf="@id/view30"
-        app:layout_constraintEnd_toEndOf="@id/view30"
-        app:layout_constraintTop_toTopOf="@id/view30"
-        app:layout_constraintBottom_toBottomOf="@id/view30" />
-
     <TextView
         android:id="@+id/tv_4"
         android:layout_width="wrap_content"
@@ -654,11 +254,11 @@
         app:layout_constraintStart_toStartOf="@id/btn_5"
         app:layout_constraintTop_toTopOf="@id/btn_5" />
 
-    <TextView
+    <ImageView
         android:id="@+id/tv_trashbin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+"
+        android:src="@drawable/baseline_delete_outline_24"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/btn_hapus"
         app:layout_constraintEnd_toEndOf="@id/btn_hapus"
@@ -740,16 +340,16 @@
         app:layout_constraintStart_toStartOf="@id/btn_3"
         app:layout_constraintTop_toTopOf="@id/btn_3" />
 
-    <TextView
-        android:id="@+id/tv_kurang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="3dp"
-        android:text="-"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/view36"
-        app:layout_constraintEnd_toEndOf="@id/view36"
-        app:layout_constraintStart_toStartOf="@id/view36"
-        app:layout_constraintTop_toTopOf="@id/view36" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText"
+        android:layout_width="356dp"
+        android:layout_height="48dp"
+        android:hint="note"
+        app:layout_constraintBottom_toBottomOf="@+id/container_input_text"
+        app:layout_constraintEnd_toEndOf="@+id/container_input_text"
+        app:layout_constraintStart_toStartOf="@+id/container_input_text"
+        app:layout_constraintTop_toTopOf="@+id/view19"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

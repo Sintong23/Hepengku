@@ -2,7 +2,10 @@ package com.kelompoksigma.hepengku_.retrovit
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Path
 
@@ -63,5 +66,15 @@ interface ApiService {
 
     @GET("api/categories")
     suspend fun getCategories(): List<Category>
+
+    @FormUrlEncoded
+    @POST("api/transactions")
+    suspend fun addTransaction(
+        @Field("date") date: String,
+        @Field("amount") amount: Int,
+        @Field("type") type: String,
+        @Field("category_id") categoryId: Int,
+        @Field("note") note: String
+    ): Response<Unit>
 
 }

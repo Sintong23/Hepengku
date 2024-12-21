@@ -27,24 +27,15 @@ class CategoryAdapter(
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val category = categories[position]
-
-        // Set nama kategori
         holder.tvCategoryName.text = category.name
-
-        // Set ikon kategori
         holder.ivIcon.setImageResource(
             holder.itemView.context.resources.getIdentifier(
-                category.icon.substringBefore("."),
-                "drawable",
-                holder.itemView.context.packageName
-            ).takeIf { it != 0 } ?: R.drawable.ic_default_icon // Gunakan ikon default jika tidak ditemukan
+                category.icon.substringBefore("."), "drawable", holder.itemView.context.packageName
+            ).takeIf { it != 0 } ?: R.drawable.ic_default_icon
         )
-
-        // Set klik listener
-        holder.itemView.setOnClickListener {
-            onClick(category)
-        }
+        holder.itemView.setOnClickListener { onClick(category) } // Klik listener
     }
+
 
     override fun getItemCount(): Int = categories.size
 }
