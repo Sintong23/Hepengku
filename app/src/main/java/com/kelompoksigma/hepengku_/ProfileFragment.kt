@@ -24,9 +24,9 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Tambahkan tombol untuk navigasi ke EditProfile
-        binding.btnEditProfile.setOnClickListener {
-            findNavController().navigate(R.id.editProfileFragment) // Pastikan ID ini ada di main_nav.xml
-        }
+//        binding.btnEditProfile.setOnClickListener {
+//            findNavController().navigate(R.id.editProfileFragment) // Pastikan ID ini ada di main_nav.xml
+//        }
 
         // Tambahkan tombol untuk navigasi ke EditProfile
         binding.btnSetting.setOnClickListener {

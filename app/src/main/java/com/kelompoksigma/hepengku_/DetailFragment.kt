@@ -16,6 +16,7 @@ import java.util.Locale
 import androidx.lifecycle.lifecycleScope
 import android.util.Log
 import android.widget.FrameLayout
+import android.widget.Toast
 import com.kelompoksigma.hepengku_.retrovit.RetrofitInstance
 import kotlinx.coroutines.launch
 
@@ -57,6 +58,9 @@ class DetailFragment : Fragment() {
         // Sembunyikan custom keyboard
         binding.tvDelete.setOnClickListener {
             hideCustomKeyboard()
+        }
+        binding.btnDelete.setOnClickListener {
+            deleteTransaction(args.id)
         }
 
         // Menambahkan listener untuk mendeteksi klik di luar keyboard
@@ -193,7 +197,23 @@ class DetailFragment : Fragment() {
 
 
 
-
+    private fun deleteTransaction(transactionId: Int) {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitInstance.api.deleteTransaction(transactionId)
+                if (response.isSuccessful) {
+                    Toast.makeText(requireContext(), "Transaksi berhasil dihapus!", Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(R.id.action_detailFragment_to_homeFragment)
+                } else {
+                    Log.e("DetailFragment", "Error: ${response.errorBody()?.string()}")
+                    Toast.makeText(requireContext(), "Gagal menghapus transaksi.", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                Log.e("DetailFragment", "Exception: ${e.message}")
+                Toast.makeText(requireContext(), "Terjadi kesalahan saat menghapus transaksi.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
 
 
     /**

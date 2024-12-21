@@ -2,6 +2,7 @@ package com.kelompoksigma.hepengku_.retrovit
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -46,6 +47,16 @@ data class Category(
 )
 
 
+data class ExpenseSummary(
+    val category_name: String,
+    val percentage: Float
+)
+
+data class IncomeSummary(
+    val category_name: String,
+    val percentage: Float
+)
+
 interface ApiService {
     @GET("api/summary")
     fun getSummary(): Call<SummaryResponse>
@@ -76,5 +87,14 @@ interface ApiService {
         @Field("category_id") categoryId: Int,
         @Field("note") note: String
     ): Response<Unit>
+
+    @DELETE("api/transactions/{id}")
+    suspend fun deleteTransaction(@Path("id") id: Int): Response<Unit>
+
+    @GET("api/transactions/expense-summary")
+    suspend fun getExpenseSummary(): Response<List<ExpenseSummary>>
+
+    @GET("api/transactions/income-summary")
+    suspend fun getIncomeSummary(): Response<List<IncomeSummary>>
 
 }
