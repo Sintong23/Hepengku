@@ -22,6 +22,10 @@ Tim pengembang: Kelompok 6
 
 Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna mengelola keuangan pribadi dengan lebih efisien. Hepengku memungkinkan Anda untuk mencatat pendapatan dan pengeluaran sehari-hari, memantau kebiasaan belanja, serta merencanakan anggaran dengan mudah.
 
+## UI Design
+
+[Link Figma]([https://www.figma.com/design/xNDVeDLdNdsU6jKidOBbfW/BookJas---Mobile?node-id=0-1&t=p7ytFbfWdCg9IHS5-1](https://www.figma.com/design/mPpeR4zjzgxXvZZdBbcgvR/Hepengki?node-id=0-1&t=qBPSTOTxqcwNBmKJ-1))
+
 ## **Features**
 
    
