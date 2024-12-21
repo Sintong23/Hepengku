@@ -45,10 +45,8 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 - Menambahkan pemasukan dan kategori pemasukan.
 - Menambahkan pengeluaran dan kategori pengeluaran.
 
-**5. Transfer:**
-- Melakukan transaksi.
-- Melihat kategori transaksi.
-    
+**5. Melihat:**
+- Statistik
 
   
 ## **Library**
