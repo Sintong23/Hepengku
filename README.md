@@ -24,7 +24,6 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 
 ## **Features**
 
-### **USER :**
    
 **1. Dashboard:**
 - Melihat pengeluaran/pemasukan berdasarkan periode (harian, mingguan, bulanan).
@@ -51,15 +50,15 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 - Melihat kategori transaksi.
     
 
-### **2. ADMIN :**
-    
-Fungsi: 
-1. Membuat, mengedit, dan menghapus kategori anggaran.
-  
   
 ## **Library**
 
-TBA
+- Retrofit (untuk komunikasi API RESTful)
+-	Gson (untuk parsing JSON)
+-	MPAndroidChart (untuk visualisasi data seperti PieChart) 
+-	Lifecycle & Coroutines (untuk pengelolaan UI dan pemanggilan asinkron)
+-	Navigation Component (untuk navigasi antar fragment)
+-	Material Design Component
 
 ## **Permission**
 
