@@ -24,7 +24,7 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 
 ## UI Design
 
-[Link Figma](https://www.figma.com/design/xNDVeDLdNdsU6jKidOBbfW/BookJas---Mobile?node-id=0-1&t=p7ytFbfWdCg9IHS5-1](https://www.figma.com/design/mPpeR4zjzgxXvZZdBbcgvR/Hepengki?node-id=0-1&t=qBPSTOTxqcwNBmKJ-1)
+[Link Figma](https://www.figma.com/design/mPpeR4zjzgxXvZZdBbcgvR/Hepengki?node-id=0-1&t=qBPSTOTxqcwNBmKJ-1)
 
 ## Database Laravel
 [Link Github](https://github.com/Sintong23/Hepengku)
