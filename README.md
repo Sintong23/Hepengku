@@ -27,7 +27,7 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 [Link Figma](https://www.figma.com/design/mPpeR4zjzgxXvZZdBbcgvR/Hepengki?node-id=0-1&t=qBPSTOTxqcwNBmKJ-1)
 
 ## Database Laravel
-[Link Github](https://github.com/Sintong23/Hepengku)
+[Link Github](https://github.com/Sintong23/Database_Hepengku)
 
 ## **Features**
 
@@ -71,27 +71,23 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 - Network State (Opsional, jika Anda ingin memastikan koneksi tersedia sebelum mengakses API) Permission
 
 ## **Environment**
-Environment untuk Pengembangan dan Testing Aplikasi Hepengku
+Beberapa syarat environment untuk menjalankan aplikasi ini:
 
-- **Operating System**: Windows 11 Professional (64-bit)
-- **RAM** : 8GB
-- **Harddisk** : SSD 512GB
-- **Processor** : Intel Core i5 Generasi 10 atau lebih tinggi 
-- **VGA** : Intel® Iris® Xᵉ Graphics 
 - **Kotlin**: Versi terbaru (>= 1.6.0)
-- **Android Studio**: Versi terbaru Android SDK 31 atau lebih tinggi dan Android Emulator.
-- **JDK**: Java Development Kit versi 11.
+- **Android Studio**: Versi terbaru dengan Android SDK 31 atau lebih tinggi.
+- **JDK**: Java Development Kit versi 21.
 - **Gradle**: Versi yang sesuai dengan Android Studio terbaru.
-
 
 ### **Instalasi dan Setup**
 
 1. **Install Android Studio**
     - Download dan install Android Studio dari [Android Studio Official Website](https://developer.android.com/studio).
     - Pastikan Android SDK 31 atau lebih tinggi terinstal melalui SDK Manager.
-2. **Install JDK**
+2. **Install Database Api Laravel**
+   - Untuk informasi lebih lanjut bisa dilihat di [Database Laravel](https://github.com/Sintong23/Database_Hepengku)
+3. **Install JDK**
     - Download dan install JDK versi 11 dari [Oracle JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) atau [OpenJDK](https://openjdk.java.net/install/).
-3. **Clone Repository**
+4. **Clone Repository**
     - Clone repository ini ke lokal komputer:
       ```
       git clone https://github.com/Sintong23/Hepengku.git
