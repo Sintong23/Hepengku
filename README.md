@@ -22,9 +22,15 @@ Tim pengembang: Kelompok 6
 
 Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna mengelola keuangan pribadi dengan lebih efisien. Hepengku memungkinkan Anda untuk mencatat pendapatan dan pengeluaran sehari-hari, memantau kebiasaan belanja, serta merencanakan anggaran dengan mudah.
 
+## UI Design
+
+[Link Figma](https://www.figma.com/design/mPpeR4zjzgxXvZZdBbcgvR/Hepengki?node-id=0-1&t=qBPSTOTxqcwNBmKJ-1)
+
+## Database Laravel
+[Link Github](https://github.com/Sintong23/Hepengku)
+
 ## **Features**
 
-### **USER :**
    
 **1. Dashboard:**
 - Melihat pengeluaran/pemasukan berdasarkan periode (harian, mingguan, bulanan).
@@ -46,24 +52,23 @@ Hepengku adalah aplikasi money tracker yang dirancang untuk membantu pengguna me
 - Menambahkan pemasukan dan kategori pemasukan.
 - Menambahkan pengeluaran dan kategori pengeluaran.
 
-**5. Transfer:**
-- Melakukan transaksi.
-- Melihat kategori transaksi.
-    
+**5. Data:**
+- Statistik pemasukan dan pengeluaran
 
-### **2. ADMIN :**
-    
-Fungsi: 
-1. Membuat, mengedit, dan menghapus kategori anggaran.
-  
   
 ## **Library**
 
-TBA
+- Retrofit (untuk komunikasi API RESTful)
+-	Gson (untuk parsing JSON)
+-	MPAndroidChart (untuk visualisasi data seperti PieChart) 
+-	Lifecycle & Coroutines (untuk pengelolaan UI dan pemanggilan asinkron)
+-	Navigation Component (untuk navigasi antar fragment)
+-	Material Design Component
 
 ## **Permission**
 
-TBA
+- Internet Access Permission
+- Network State (Opsional, jika Anda ingin memastikan koneksi tersedia sebelum mengakses API) Permission
 
 ## **Environment**
 Environment untuk Pengembangan dan Testing Aplikasi Hepengku
